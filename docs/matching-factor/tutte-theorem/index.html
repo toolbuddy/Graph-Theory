@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutte&#x27;s theorem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/hljs-solarized-light.min.css"/>
+  </head>
+<body><h1 id="tutte's-theorem"><a class="header-link" href="#tutte's-theorem"></a>Tutte&#39;s theorem</h1>
+<p>由 Tutte 於 1947 年提出，理論為 <code>A graph G has a 1-factor iff o(G-S)&lt;=|S| for every S, which belongs to V(G)</code></p>
+<ul class="list">
+<li><code>o(G)</code>: 表示 graph G 的 odd components 的數量</li>
+<li><code>1-factor</code>: 等於 perfact matching 的狀態</li>
+<li><code>V(G)</code>: 表示 graph G 的 vertex 集合</li>
+</ul>
+<h1 id="證明與概念詳細解釋"><a class="header-link" href="#證明與概念詳細解釋"></a>證明與概念詳細解釋</h1>
+<p>從正向（<code>Necessity</code>）與反向（<code>Sufficiency</code>）證明</p>
+<h2 id="necessity（必要性）"><a class="header-link" href="#necessity（必要性）"></a>Necessity（必要性）</h2>
+<ul class="list">
+<li>正面從 G 是為一個 1-factor 的圖做解釋，可以知道以這種情況下可以畫出圖形：</li>
+</ul>
+<p class="img-container"><img src="../../../res/ch3/g-tutte-ne.png" alt=""></p>
+<ul class="list">
+<li>以性質來看<ul class="list">
+<li>S 屬於 V(G)，而所有屬於 <code>G-S</code> 的 odd components 皆有一條 edge 連到 <code>S</code> 上</li>
+<li>而連到 S 內，則表示在 S 中必有同等數目的 vertices 與這條 edge 做對應的 endpoint，且互為 unique（不會重複使用 endpoint）</li>
+</ul>
+</li>
+<li>透過<strong>鴿籠原理</strong>，我們可以知道，以上圖為例，S 上有 3 個 odd components 與之連線，有 3 條 edges 進 S 當中，與之對應必有 3 個 unique 的 vertex，則 <code>|S| &gt;= o(G-S)</code> 這條式子必成立</li>
+</ul>
+<blockquote>
+<p>從正面去證明是直觀，並且簡單的；
+而接下來是 tutte 的精華</p>
+</blockquote>
+<h2 id="sufficiency（充份性）"><a class="header-link" href="#sufficiency（充份性）"></a>Sufficiency（充份性）</h2>
+<ul class="list">
+<li>這邊是從後面性質證回來，也就是說明擁有 <code>o(G-S) &lt;= |S|</code> 性質的 graph，其必有 1-factor（perfact matching）的存在</li>
+<li>而我們可以使用反證法（擁有 <code>o(G-S) &lt;= |S|</code> 性質，卻沒有 <code>1-factor</code>）來做證明，透過相同模型（分兩邊做討論），來分析各種情況，舉出擁有 <code>1-factor</code> 的實例，說明此假設錯誤，tutte&#39;s theorem 為真</li>
+</ul>
+<p>### </p>
+</body>
+</html>
