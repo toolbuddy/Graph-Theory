@@ -42,7 +42,7 @@
 <ul class="list">
 <li>正面從 G 是為一個 1-factor 的圖做解釋，可以知道以這種情況下可以畫出圖形：</li>
 </ul>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-ne.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-J.png?raw=true" alt=""></p>
 <ul class="list">
 <li>以性質來看<ul class="list">
 <li>S 屬於 V(G)，而所有屬於 <code>G-S</code> 的 odd components 皆有一條 edge 連到 <code>S</code> 上</li>
@@ -75,7 +75,7 @@
 <li>而現在找一個 S，S ⊆ V (H)，屬於 H 的 vertex 集合</li>
 <li>當 e 的其中一個 endpoint 在 S 之中時，則 <code>H - S = H - e - S</code> ，這麼一來，便可以知道： <pre class="hljs"><code><span class="hljs-function"><span class="hljs-title">o</span><span class="hljs-params">(H - S)</span> = <span class="hljs-title">o</span><span class="hljs-params">(H - e - S)</span> ≤ |S|</span></code></pre></li>
 <li><p>否則，假設 J, J&#39; 為 <code>H - e - S</code> 中的 Component，其內包含了 e 的 endpoint； 則可知其性質可分為以下幾種：</p>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-J.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-J.png?raw=true" alt=""></p>
 </li>
 <li><p>而這幾種 case 都符合 <code>o(H - S) ≤ o(H - e - S) ≤ |S|</code>，則證明了 <em>Claim 1</em> 的假設符合 Tutte Condition</p>
 </li>
@@ -104,7 +104,7 @@
 </ul>
 <h4 id="case-1"><a class="header-link" href="#case-1"></a>Case 1</h4>
 <p><code>G-U</code> 是為互不相連的 cliques（complete graph） 組成，如下圖所示：</p>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case1.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1.png?raw=true" alt=""></p>
 <ul class="list">
 <li>而灰色的點則為 U，在圖中不畫出這些 U 內 vertex 的 edge</li>
 <li>計算 o(G-U) = 4<ul class="list">
@@ -123,7 +123,7 @@
 </ul>
 </li>
 </ul>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case1-red.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1-red.png?raw=true" alt=""></p>
 <ul class="list">
 <li>接下來便是繼續加大這個 matching，以達到 graph G 的 perfect matching <em>M&#39;</em><ul class="list">
 <li>剛剛的步驟後，剩餘未被感染的 vertex 都在 odd components 當中</li>
@@ -131,7 +131,7 @@
 </ul>
 </li>
 </ul>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case1-green.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1-green.png?raw=true" alt=""></p>
 <ul class="list">
 <li><p>到此為止，graph 當中沒有 matched 的 vertices 數量為 <code>|U| - o(G-U)</code> </p>
 <ul class="list">
@@ -150,11 +150,11 @@ Ans: 因為可以從前面得知，目前 graph 的組成使用到了：
 </ul>
 </li>
 </ul>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case1-blue.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1-blue.png?raw=true" alt=""></p>
 <p>這麼一來，Case 1 的狀態便分析完畢</p>
 <h4 id="case-2"><a class="header-link" href="#case-2"></a>Case 2</h4>
 <p><code>G-U</code> 並非互不相連的 cliques（complete graph）的情形。如下圖：</p>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case2.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case2.png?raw=true" alt=""></p>
 <ul class="list">
 <li><p>設 H 為其中一個 <code>G-U</code> 中的 component，並且不為 clique.</p>
 <ul class="list">
@@ -168,7 +168,7 @@ w 可能不一定屬於 <span class="hljs-built_in">H</span></code></pre></li>
 <li><p>回到 G 的部份，當加入一個 single edge 進 G 後，則會產生一個 perfect matching； 根據此，我們假設了兩個 matching - <code>M1(藍色) = G + xz</code> 以及 <code>M2(紅色) = G + wy</code>，如下圖所示：</p>
 </li>
 </ul>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case2-m1m2.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case2-m1m2.png?raw=true" alt=""></p>
 <ul class="list">
 <li>當中，虛線的 xz, wy 並不屬於 G</li>
 <li>設 F = M1 及 M2 的 symmetric difference；而 xz,wy 則屬於 F <ul class="list">
@@ -201,7 +201,7 @@ w 可能不一定屬於 <span class="hljs-built_in">H</span></code></pre></li>
 </ul>
 </li>
 </ul>
-<p class="img-container"><img src="../../../res/ch3/g-tutte-case2-caseAB.png" alt=""></p>
+<p class="img-container"><img src="https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case2-caseAB.png?raw=true" alt=""></p>
 <p>如此我們便可以說，在符合 tutte condition 情況下，其必定有 1-factor 的存在</p>
 <h2 id="summary"><a class="header-link" href="#summary"></a>Summary</h2>
 <p>Case 1 的部份較為簡單，透過鴿籠原理即可證實。</p>
