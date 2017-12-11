@@ -116,15 +116,19 @@
 * 到此為止，graph 當中沒有 matched 的 vertices 數量為 `|U| - o(G-U)` 
     * 這些 vertices 都屬於 U，並且以 U 的性質來看，他們都是`成對、並且相鄰的（其 degree 為所有 vertex 數量減 1）`
     * 而這些 vertices 數量為偶數；
+
     ```
+    
     為何為偶數？
     Ans: 因為可以從前面得知，目前 graph 的組成使用到了：
-    1. 偶數的 components -> 提供 even number 的 vertices
-    2. 奇數的 components -> 提供 odd number 的 vertices
-    3. 而 U 內與奇數 components 相連使用的 vertices -> odd
+    (1) 偶數的 components -> 提供 even number 的 vertices
+    (2) 奇數的 components -> 提供 odd number 的 vertices
+    (3) 而 U 內與奇數 components 相連使用的 vertices -> odd
     而在一開始假設那段，我們可以知道再情況下， graph 的 vertice 總數量為 even ！
     那麼從上面可知，even（總數）- even（偶數 comp.）- odd（奇數 comp.） - odd（U 內對應的 vertices）後的結果，必為偶數！(U 內剩餘的 vertices)
+
     ```
+    
     * 由於剩餘的互相為 pairwise adjacent vertices，這些 vertice 可以自行形成 perfect matching (下圖中藍色部份)
 
 ![](../../../res/ch3/g-tutte-case1-blue.png)

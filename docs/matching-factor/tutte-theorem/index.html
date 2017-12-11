@@ -133,19 +133,20 @@
 </ul>
 <p class="img-container"><img src="../../../res/ch3/g-tutte-case1-green.png" alt=""></p>
 <ul class="list">
-<li>到此為止，graph 當中沒有 matched 的 vertices 數量為 <code>|U| - o(G-U)</code> <ul class="list">
+<li><p>到此為止，graph 當中沒有 matched 的 vertices 數量為 <code>|U| - o(G-U)</code> </p>
+<ul class="list">
 <li>這些 vertices 都屬於 U，並且以 U 的性質來看，他們都是<code>成對、並且相鄰的（其 degree 為所有 vertex 數量減 1）</code></li>
-<li>而這些 vertices 數量為偶數；
-```
+<li><p>而這些 vertices 數量為偶數；</p>
+<pre class="hljs"><code>
 為何為偶數？
-Ans: 因為可以從前面得知，目前 graph 的組成使用到了：</li>
-<li>偶數的 components -&gt; 提供 even number 的 vertices</li>
-<li>奇數的 components -&gt; 提供 odd number 的 vertices</li>
-<li>而 U 內與奇數 components 相連使用的 vertices -&gt; odd
-而在一開始假設那段，我們可以知道再情況下， graph 的 vertice 總數量為 even ！
-那麼從上面可知，even（總數）- even（偶數 comp.）- odd（奇數 comp.） - odd（U 內對應的 vertices）後的結果，必為偶數！(U 內剩餘的 vertices)
-```</li>
-<li>由於剩餘的互相為 pairwise adjacent vertices，這些 vertice 可以自行形成 perfect matching (下圖中藍色部份)</li>
+Ans: 因為可以從前面得知，目前 graph 的組成使用到了：
+(<span class="hljs-number">1</span>) 偶數的 <span class="hljs-built_in">components</span> -&gt; 提供 <span class="hljs-built_in">even</span> number 的 <span class="hljs-built_in">vertices</span>
+(<span class="hljs-number">2</span>) 奇數的 <span class="hljs-built_in">components</span> -&gt; 提供 <span class="hljs-built_in">odd</span> number 的 <span class="hljs-built_in">vertices</span>
+(<span class="hljs-number">3</span>) 而 U 內與奇數 <span class="hljs-built_in">components</span> 相連使用的 <span class="hljs-built_in">vertices</span> -&gt; <span class="hljs-built_in">odd</span>
+而在一開始假設那段，我們可以知道再情況下， graph 的 vertice 總數量為 <span class="hljs-built_in">even</span> ！
+那麼從上面可知，<span class="hljs-built_in">even</span>（總數）- <span class="hljs-built_in">even</span>（偶數 comp.）- <span class="hljs-built_in">odd</span>（奇數 comp.） - <span class="hljs-built_in">odd</span>（U 內對應的 <span class="hljs-built_in">vertices</span>）後的結果，必為偶數！(U 內剩餘的 <span class="hljs-built_in">vertices</span>)</code></pre></li>
+<li><p>由於剩餘的互相為 pairwise adjacent vertices，這些 vertice 可以自行形成 perfect matching (下圖中藍色部份)</p>
+</li>
 </ul>
 </li>
 </ul>
