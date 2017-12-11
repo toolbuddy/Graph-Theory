@@ -23,3 +23,7 @@ Notes/Implementation for course - graph theory.
 ### Tutte's Condition
 
 * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/tutte-theorem/)
+
+### 2 factor algorithm
+
+* [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/2-factor-algo/)
