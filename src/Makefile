@@ -5,6 +5,11 @@ CH3 = matching-factor
 
 doc_page:
 	cd ../docs/ && npm install 
+	# hall
+	../docs/node_modules/markdown-styles/bin/generate-md \
+		--layout $(DOCS_LAYOUT) \
+		--input $(CH3)/hall-condition/ \
+		--output ../docs/$(CH3)/hall-condition
 	# tutte 
 	../docs/node_modules/markdown-styles/bin/generate-md \
 		--layout $(DOCS_LAYOUT) \

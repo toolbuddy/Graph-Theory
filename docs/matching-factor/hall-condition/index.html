@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hall&#x27;s Condition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/hljs-solarized-light.min.css"/>
+  </head>
+<body><h1 id="hall's-condition"><a class="header-link" href="#hall's-condition"></a>Hall&#39;s Condition</h1>
+<p>一個 X,Y 的 bipartite graph G，擁有一個感染了所有 X partite set 內 vertices 的 Matching 的條件是必須符合 <code>| S | ≤ | N(S) |</code> ，S 屬於 X partite set ( N(S) 則屬於 Y partite set ) </p>
+<h2 id="推導"><a class="header-link" href="#推導"></a>推導</h2>
+<p>證明通常在條件的情況下，可以由正向（必要性）、及反向（充份性）來做推導的方向，並依據方向做後續的證明動作</p>
+<h3 id="necessity（必要性）"><a class="header-link" href="#necessity（必要性）"></a>Necessity（必要性）</h3>
+<p>從必要性著手來說是簡單的，我們可以用簡單的反證法來做說明：</p>
+<ul class="list">
+<li>若 |S| &gt; |N(S)| 的條件下，能夠感染所有的 X，則可以從對應的圖中看到，N(S) 的數量是不足以提供給 S 做一一對應</li>
+</ul>
+<h3 id="sufficiency（充份性）"><a class="header-link" href="#sufficiency（充份性）"></a>Sufficiency（充份性）</h3>
+<p>再來就是比較複雜些的反向； 若 Hall condition 成立<code>（p）</code>，則 X,Y-bigraph 的 X 會全部被感染<code>（q）</code></p>
+<p>而講義課本上的證明方式是利用上述反向再加上反向，透過笛摩根定律可以得到 <code>非 q 推導至 非 p</code> 這個結果，也是接下來討論主要依據</p>
+<pre class="hljs"><code>變成：
+當 M 為一個 G 內的 maximum matching，且 M 沒有完全感染 X partite set，則一定存在屬於 X 的集合：S，並且 |<span class="hljs-string">N(S)</span>|<span class="hljs-string"> &lt; </span>|<span class="hljs-string">S</span>|</code></pre><ul class="list">
+<li>有了假設列式後，便可以開始推導：<ul class="list">
+<li>u ∈ X： u 為一個沒有被 M 所感染的 vertex</li>
+<li>定義集合： S 屬於 X， T 則屬於 Y， 兩者皆為<code>從 u 透過 M-alternating paths 可觸及</code>的 vertex 集合</li>
+</ul>
+</li>
+</ul>
+</body>
+</html>

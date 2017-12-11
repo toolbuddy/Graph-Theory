@@ -20,6 +20,10 @@ Notes/Implementation for course - graph theory.
 
 ## Chapter 3
 
+### Hall's Condition
+
+* [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/hall-condition/)
+
 ### Tutte's Condition
 
 * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/tutte-theorem/)
