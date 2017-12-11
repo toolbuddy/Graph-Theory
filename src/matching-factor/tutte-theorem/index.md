@@ -187,6 +187,12 @@ yw 屬於 C，則我們可以稍微改一下上面圖，並標示出每個屬於
 
 如此我們便可以說，在符合 tutte condition 情況下，其必定有 1-factor 的存在
 
+
+## Summary
+Case 1 的部份較為簡單，透過鴿籠原理即可證實。
+
+Case 2 的部份主要是以**一直符合 Tutte Condition 的 graph G**，在差一條 edge 可以成為 "1-factor" `G'` 的假設為前提下去做的分析，透過證實在差一條 edge 可成為 1-factor 的這個性質來強調，分析下的 graph 皆為`假設下沒有 1-factor` 的這個情形。所以從這個 G 下去做分析，來證實 `只要符合 tutte condition，就一定有 1-factor 存在` 這個性質，說明前面假設部份為錯誤的假設情況。
+
 # Reference
 
 * [notes-March15.pdf](http://ion.uwinnipeg.ca/~ychen2/advancedAD/notes-March15.pdf)
