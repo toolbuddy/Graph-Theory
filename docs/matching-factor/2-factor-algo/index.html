@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2 Factor Algorithm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/hljs-solarized-light.min.css"/>
+  </head>
+<body><h1 id="2-factor-algorithm"><a class="header-link" href="#2-factor-algorithm"></a>2 Factor Algorithm</h1>
+<p>最主要的概念即為 <code>把 2*k - regular graph 轉換成 2 個 k-factor</code></p>
+<h2 id="推導"><a class="header-link" href="#推導"></a>推導</h2>
+<p>首先考慮到 sufficient，以 connected graph G 說明：</p>
+<ul class="list">
+<li>當 connected graph G 為 <code>even degree</code> 時，擁有一條 <code>Eulerian Trail</code></li>
+<li>我們可以<code>走遍(a.k.a = Traversal)</code>一次這條 trail，並且獲得 G 的 <code>orientation</code>： D</li>
+</ul>
+<h3 id="進一步修改原本圖形做解釋"><a class="header-link" href="#進一步修改原本圖形做解釋"></a>進一步修改原本圖形做解釋</h3>
+<ul class="list">
+<li>而改成 directed graph 後，此時的每個 vertex 都有 in/out-degree，並且依照前面提到的， connected graph G 為 2*k regular 的情況下，這時的 in/out-degree 的數值相等，都等於 <code>k</code></li>
+<li><p>這時我們來做些修改，方便辨識：</p>
+<ul class="list">
+<li>有了方才提到的 in/out-degree 的屬性後，我們著手來修改原本 G 的 vertex</li>
+<li>用另外兩種 vertex: <code>v&#39;</code>, <code>v&#39;&#39;</code> 來取代原本的 vertex: <code>v</code>（分別代表 in/out ）</li>
+<li>而原本的 directed graph lines(e.g. = edges) <code>u-&gt;v, ∈ E(D), 屬於 D 的 edge 集合</code>，在這個取代過後的 graph 當中，我們則以一條 <code>u&#39;-&gt;v&#39;&#39;</code> 的 edge 做取代<pre class="hljs"><code>注意！取代過後的 edge 上面 vertex 的標記
+出發點為一個點、目的點則是兩個點！
+用來區分 <span class="hljs-keyword">in</span>/<span class="hljs-keyword">out</span> 的不同使用</code></pre></li>
+<li>而 D 之 in/out degree（由 <code>v&#39;</code>, <code>v&#39;&#39;</code> 的集合表示） 數值皆等於 <code>k</code>，而 <code>v&#39;</code>, <code>v&#39;&#39;</code> 所形成的即為一個 bipartite <code>G&#39;</code>，並且為 <code>k-regular</code>； 而 <code>G&#39;</code> 的 lines 則可分解成 <code>k 個 perfect matching</code><pre class="hljs"><code>值得注意的地方是，在這裡這 k 個 perfect <span class="hljs-keyword">matching</span> 都是在 bipartite 的圖形下的 perfect <span class="hljs-keyword">matching</span>
+也可以解釋到下面，為什麼可以從 k 個 perfect <span class="hljs-keyword">matching</span> 來對應到 k 個 <span class="hljs-number">2</span>-factor 的原因</code></pre></li>
+</ul>
+</li>
+<li><p>再從整個角度下去看，在 <code>G&#39;</code> 中 <code>k 個 perfect matching</code> 則會對應到 <code>G</code> 上，成為 <code>k 個 2-factor</code> 存在</p>
+</li>
+</ul>
+</body>
+</html>

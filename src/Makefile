@@ -10,3 +10,8 @@ doc_page:
 		--layout $(DOCS_LAYOUT) \
 		--input $(CH3)/tutte-theorem/ \
 		--output ../docs/$(CH3)/tutte-theorem
+	# 2-factor
+	../docs/node_modules/markdown-styles/bin/generate-md \
+		--layout $(DOCS_LAYOUT) \
+		--input $(CH3)/2-factor-algo/ \
+		--output ../docs/$(CH3)/2-factor-algo
