@@ -27,7 +27,7 @@
 
 * 正面從 G 是為一個 1-factor 的圖做解釋，可以知道以這種情況下可以畫出圖形：
 
-![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-J.png?raw=true)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-ne.png?raw=true)
 
 * 以性質來看
     * S 屬於 V(G)，而所有屬於 `G-S` 的 odd components 皆有一條 edge 連到 `S` 上
