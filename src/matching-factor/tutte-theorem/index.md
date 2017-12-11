@@ -27,7 +27,7 @@
 
 * 正面從 G 是為一個 1-factor 的圖做解釋，可以知道以這種情況下可以畫出圖形：
 
-![](../../../res/ch3/g-tutte-ne.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-J.png?raw=true)
 
 * 以性質來看
     * S 屬於 V(G)，而所有屬於 `G-S` 的 odd components 皆有一條 edge 連到 `S` 上
@@ -67,7 +67,7 @@
     ```
     * 否則，假設 J, J' 為 `H - e - S` 中的 Component，其內包含了 e 的 endpoint； 則可知其性質可分為以下幾種：
 
-    ![](../../../res/ch3/g-tutte-J.png)
+    ![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-J.png?raw=true)
 
     * 而這幾種 case 都符合 `o(H - S) ≤ o(H - e - S) ≤ |S|`，則證明了 *Claim 1* 的假設符合 Tutte Condition
 * 因此，假設 1-factor 的存在性並不足以使 graph 擁有 Tutte Condition 的話，則我們可以選擇一個 `Maximal counterexample G`，使這個 G 擁有幾項特性：   
@@ -93,7 +93,7 @@
 
 `G-U` 是為互不相連的 cliques（complete graph） 組成，如下圖所示：
 
-![](../../../res/ch3/g-tutte-case1.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1.png?raw=true)
 
 * 而灰色的點則為 U，在圖中不畫出這些 U 內 vertex 的 edge
 * 計算 o(G-U) = 4
@@ -105,13 +105,13 @@
     * odd component 中的情況會是`必有一個 vertex 無法被 matching 所感染`
     * 而 even component 則是完美的感染完畢
 
-![](../../../res/ch3/g-tutte-case1-red.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1-red.png?raw=true)
 
 * 接下來便是繼續加大這個 matching，以達到 graph G 的 perfect matching *M'*
     * 剛剛的步驟後，剩餘未被感染的 vertex 都在 odd components 當中
     * 所以我們可以透過讓這些 *未被感染者*，與 U 內的 vertex 建立 edge，來完成感染（下圖中綠色的部份）
 
-![](../../../res/ch3/g-tutte-case1-green.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1-green.png?raw=true)
 
 * 到此為止，graph 當中沒有 matched 的 vertices 數量為 `|U| - o(G-U)` 
     * 這些 vertices 都屬於 U，並且以 U 的性質來看，他們都是`成對、並且相鄰的（其 degree 為所有 vertex 數量減 1）`
@@ -131,7 +131,7 @@
     
     * 由於剩餘的互相為 pairwise adjacent vertices，這些 vertice 可以自行形成 perfect matching (下圖中藍色部份)
 
-![](../../../res/ch3/g-tutte-case1-blue.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case1-blue.png?raw=true)
 
 這麼一來，Case 1 的狀態便分析完畢
 
@@ -139,7 +139,7 @@
 
 `G-U` 並非互不相連的 cliques（complete graph）的情形。如下圖：
 
-![](../../../res/ch3/g-tutte-case2.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case2.png?raw=true)
 
 * 設 H 為其中一個 `G-U` 中的 component，並且不為 clique.
     * 其至少有 3 個 vertices，其中兩個之間的距離必為 2（因為其不為 clique 的緣故）；比如上圖中 H 內的 `x`, `z`
@@ -153,7 +153,7 @@
 
 * 回到 G 的部份，當加入一個 single edge 進 G 後，則會產生一個 perfect matching； 根據此，我們假設了兩個 matching - `M1(藍色) = G + xz` 以及 `M2(紅色) = G + wy`，如下圖所示：
 
-![](../../../res/ch3/g-tutte-case2-m1m2.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case2-m1m2.png?raw=true)
 
 * 當中，虛線的 xz, wy 並不屬於 G
 * 設 F = M1 及 M2 的 symmetric difference；而 xz,wy 則屬於 F 
@@ -183,7 +183,7 @@ yw 屬於 C，則我們可以稍微改一下上面圖，並標示出每個屬於
     * 下圖中`黃色`部份是展示 M1 - E(C) 為一組 perfect matching 於 V - V(C)
     * 而這兩組取聯集後，成為 G 的一組 perfect matching ！ 因此符合 Tutte Condition !
 
-![](../../../res/ch3/g-tutte-case2-caseAB.png)
+![](https://github.com/toolbuddy/Graph-Theory/blob/master/res/ch3/g-tutte-case2-caseAB.png?raw=true)
 
 如此我們便可以說，在符合 tutte condition 情況下，其必定有 1-factor 的存在
 
