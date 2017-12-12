@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>α(G) &#x3D; β&#x27;(G)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/hljs-solarized-light.min.css"/>
+  </head>
+<body><h1 id="α(g)-=-β'(g)"><a class="header-link" href="#α(g)-=-β'(g)"></a>α(G) = β&#39;(G)</h1>
+<pre class="hljs"><code>標住符號使用：
+
+α(G)    ： maximum <span class="hljs-built_in">independent</span> <span class="hljs-built_in">set</span>
+α<span class="hljs-string">'(G)    ： maximum matching
+β(G)   ： minimum vertex cover
+β'</span>(G)   ： minimum edge cover</code></pre><p>我們這邊來探討這個等式是怎麼出來的呢？</p>
+<h2 id="由已知所提供"><a class="header-link" href="#由已知所提供"></a>由已知所提供</h2>
+<p>從先前的 theorem、Lemma 中可得到相關性質：</p>
+<ol class="list">
+<li><p>α&#39;(G) = β(G) </p>
+<pre class="hljs"><code>Theorem:
+ <span class="hljs-keyword">If</span> G <span class="hljs-keyword">is</span> a partite, <span class="hljs-keyword">then</span> α<span class="hljs-comment">'(G) = β(G)</span></code></pre></li>
+<li><p>α(G) + β(G) = n(G) </p>
+<pre class="hljs"><code>Lemma:
+ <span class="hljs-keyword">In</span> a graph G, S belong <span class="hljs-keyword">to</span> V(G) <span class="hljs-keyword">is</span> an <span class="hljs-string">"independent set"</span> iff complement <span class="hljs-keyword">of</span> S <span class="hljs-keyword">is</span> a vertex <span class="hljs-keyword">cover</span>, <span class="hljs-keyword">then</span> <span class="hljs-string">" α(G) + β(G) = n(G) "</span></code></pre></li>
+<li><p>α&#39;(G) + β&#39;(G) = n(G) </p>
+<pre class="hljs"><code>Theorem:
+ <span class="hljs-keyword">If</span> G <span class="hljs-keyword">is</span> a graph <span class="hljs-string">"without"</span> isolated vertices, <span class="hljs-keyword">then</span> <span class="hljs-string">" α'(G) + β'(G) = n(G) "</span></code></pre></li>
+</ol>
+<h3 id="融合"><a class="header-link" href="#融合"></a>融合</h3>
+<p>簡單綜合了一下上述的性質後，可以得到列式：</p>
+<pre class="hljs"><code>α(G) + β(G) = α'(G) + β'(G) = <span class="hljs-built_in">n</span>(<span class="hljs-comment">G</span>)
+=&gt; α(G) + β(G) = α'(G) + β'(G)</code></pre><p>再透過 <code>α&#39;(G) = β(G)</code> 可以化簡上式：</p>
+<pre class="hljs"><code>=&gt; α(G) = β'(G)</code></pre><h3 id="再看到性質"><a class="header-link" href="#再看到性質"></a>再看到性質</h3>
+<p>推得此性質後，我們再回頭看看這些條件成立時，所需要的 graph 特性：</p>
+<ul class="list">
+<li>由 1, 2, 3, 式中，我們可以歸納出其 graph 應有的特性：<ul class="list">
+<li>If G is a <code>bipartite</code> graph, and with <code>no isolated vertices</code>!</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code>所以可以得到 -&gt; 
+當 G 是為 bipartite graph 且沒有 isolated vertices 時，maximum independent <span class="hljs-built_in">set</span> 等於 minimum edge cover!</code></pre></body>
+</html>

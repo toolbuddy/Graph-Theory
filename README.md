@@ -24,6 +24,10 @@ Notes/Implementation for course - graph theory.
 
 * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/hall-condition/)
 
+### α(G) = β'(G)
+
+* [理解](https://toolbuddy.github.io/Graph-Theory/matching-factor/ind-set-and-edge-cover)
+
 ### Tutte's Condition
 
 * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/tutte-theorem/)

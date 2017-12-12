@@ -10,6 +10,11 @@ doc_page:
 		--layout $(DOCS_LAYOUT) \
 		--input src/$(CH3)/hall-condition/ \
 		--output docs/$(CH3)/hall-condition
+	# ind-set-and-edge-cover
+	docs/node_modules/markdown-styles/bin/generate-md \
+		--layout $(DOCS_LAYOUT) \
+		--input src/$(CH3)/ind-set-and-edge-cover/ \
+		--output docs/$(CH3)/ind-set-and-edge-cover
 	# tutte 
 	docs/node_modules/markdown-styles/bin/generate-md \
 		--layout $(DOCS_LAYOUT) \

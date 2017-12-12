@@ -18,7 +18,7 @@
     * 而原本的 directed graph lines(e.g. = edges) `u->v, ∈ E(D), 屬於 D 的 edge 集合`，在這個取代過後的 graph 當中，我們則以一條 `u'->v''` 的 edge 做取代
     ```
     注意！取代過後的 edge 上面 vertex 的標記
-    出發點為一個點、目的點則是兩個點！
+    出發點為第一種點、目的點則是第二種點！
     用來區分 in/out 的不同使用
     ```
     * 而 D 之 in/out degree（由 `v'`, `v''` 的集合表示） 數值皆等於 `k`，而 `v'`, `v''` 所形成的即為一個 bipartite `G'`，並且為 `k-regular`； 而 `G'` 的 lines 則可分解成 `k 個 perfect matching`
