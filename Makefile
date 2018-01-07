@@ -1,9 +1,9 @@
 # doc config
 DOCS_LAYOUT = thomasf-solarizedcsslight
 CH3 = matching-factor
+CH4 = connectivity-path
 
-
-doc_page:
+ch3:
 	cd docs/ && npm install 
 	# hall
 	docs/node_modules/markdown-styles/bin/generate-md \
@@ -25,3 +25,12 @@ doc_page:
 		--layout $(DOCS_LAYOUT) \
 		--input src/$(CH3)/2-factor-algo/ \
 		--output docs/$(CH3)/2-factor-algo
+
+ch4:
+	cd docs/ && npm install
+	# 
+	docs/node_modules/papogen/main.js \
+		-s src/$(CH4) \
+		-g md -m md_doc \
+		-o docs/$(CH4) -t Graph-Theory-Ch4
+

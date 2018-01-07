@@ -37,3 +37,9 @@ Notes/Implementation for course - graph theory.
 ### 2 factor algorithm
 
 * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/2-factor-algo/)
+
+## Chapter 4
+
+> 使用了自製的 papoGen，不再需要一個個產生！
+
+* [第四章整理](https://toolbuddy.github.io/Graph-Theory/connectivity-path)

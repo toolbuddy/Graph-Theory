@@ -1,0 +1,64 @@
+<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
+<input id="tab1" type="radio" name="tabs" checked/>
+<label for="tab1">01-basic</label>
+
+<input id="tab2" type="radio" name="tabs"/>
+<label for="tab2">02-hypercube</label>
+
+<input id="tab3" type="radio" name="tabs"/>
+<label for="tab3">03-HararyGraph</label>
+
+<div class="content" id="content1"><p><h1>Basic</h1>
+<ul>
+<li>為第四章基礎部份，紀錄符號的使用</li>
+</ul>
+<h2>kappa ϰ(G)</h2>
+<p>唸做 kappa, 是為 <code>connectivity</code>，為 G 的最小 vertex 集合: <code>S</code> 的 size，其性質為 <code>G-S</code> 時會出現 disconnect 的現象，或是 <code>G-S</code> 只剩下 1 個 vertex（若 G 為 complete graph 時）</p>
+<ul>
+<li>也就是 S 的 size 剛好是在構成 disconnect 要素的 threshold 上！</li>
+</ul>
+<p>此時稱 graph G 為 <code>k-connected</code>，則表示其至少有值 = k 的 connectivity 存在！</p>
+<ul>
+<li>而 S 則稱為 G 的 <code>separating set</code>，或是 <code>vertex cut</code>，S ⊆ V(G)，且 <code>G-S</code> 會有多個 component 產生(e.g. <code>disconnect</code>)</li>
+</ul>
+<h3>ϰ(G) 性質</h3>
+<ul>
+<li>ϰ(Kn) = n-1 （Complete Graph）</li>
+<li>ϰ(G) &lt;= n(G)-2 （當 G 不為 Complete Graph）</li>
+<li>ϰ(Km,n) = min{m,n} （當 G 為 complete bipartite graph 時，取較小的 partite size 為 <code>ϰ</code> ）
+<ul>
+<li>ϰ(K3,3) = 3 : 表示其 graph 可為 1-connected, 2-connected, 3-connected</li>
+</ul>
+</li>
+<li>當一個 graph 為 connected 且有 cut vertex，則其 &gt; 2 個 vertices 時，<code>connectivity</code> &gt; 1</li>
+<li>若 graph &gt; 1 vertex 時，其 connectivity 卻為 0 時，表示其 graph <code>本身便是 disconnected</code> 狀態！</li>
+<li>ϰ(K1) = 0 （本身為一個 vertex 的情形，=0）</li>
+</ul>
+<h2>N 維度的 HyperCube</h2>
+<ul>
+<li>記做 <code>Qn</code></li>
+<li>vertex 數量為 <code>N=2^n</code></li>
+<li>每個 vertex 上都以 <code>n 個 bits</code> 的二元字串來做表示 （也就解釋為何數量為 2^n）</li>
+<li>每對鄰近的 vertices，兩兩之間只會有 <code>1 bit 不同</code></li>
+<li><code>Qn</code> 為 bipartite graph</li>
+</ul>
+<pre><code>試證：
+2 組 maximum matching 組合，其 edge 形成必為 even cycle
+而 even cycle 則可以為 partite !
+</code></pre>
+<p><img src="./res/ch4-basic-hyperprove.jpg" alt=""></p>
+<h3>HyperCube 增長維度方式</h3>
+<p><img src="./res/ch4-basic-hyperdim.jpg" alt=""></p>
+</p></div><div class="content" id="content2"><p><h1>Prove kappa of hypercube</h1>
+<ul>
+<li>
+<p>Figure 1
+<img src="./res/ch4-basic-hyperkappa.jpg" alt=""></p>
+</li>
+<li>
+<p>Figure 2
+<img src="./res/ch4-basic-hyperkappa-2.jpg" alt=""></p>
+</li>
+</ul>
+</p></div><div class="content" id="content3"><p><h1>Harary Graph</h1>
+</p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>
