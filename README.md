@@ -12,7 +12,7 @@ Notes/Implementation for course - graph theory.
 * 系統需求
     * GNU make
     * node.js
-    * npm 套件：`markdown-styles`
+    * npm 套件：以 [`papogen`](https://github.com/toolbuddy/papoGen) 為主
 
 # 目錄
 
@@ -22,21 +22,17 @@ Notes/Implementation for course - graph theory.
 
 ## Chapter 3
 
-### Hall's Condition
+* Hall's Condition
+    * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/hall-condition/)
 
-* [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/hall-condition/)
+* α(G) = β'(G)
+    * [理解](https://toolbuddy.github.io/Graph-Theory/matching-factor/ind-set-and-edge-cover)
 
-### α(G) = β'(G)
+* Tutte's Condition
+    * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/tutte-theorem/)
 
-* [理解](https://toolbuddy.github.io/Graph-Theory/matching-factor/ind-set-and-edge-cover)
-
-### Tutte's Condition
-
-* [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/tutte-theorem/)
-
-### 2 factor algorithm
-
-* [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/2-factor-algo/)
+* 2 factor algorithm
+    * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/2-factor-algo/)
 
 ## Chapter 4
 
