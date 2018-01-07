@@ -37,3 +37,21 @@
 ### HyperCube 增長維度方式
 
 ![](./res/ch4/ch4-basic-hyperdim.jpg)
+
+## ϰ'(G) - Disconnecting set
+
+* disconnecting set:
+    * 為 `edge set`（相比屬於 vertex 集合的 separating set）
+    * 標為 F (⊆ E(G))
+    * 使 G-F 有 > 1 以上的 component (使 G `disconnect` 的 edge set)
+
+* 若一個 graph 其每個 disconnecting set 至少有 k 個 edges:
+    * 則稱此 graph 為 `k-edge-connected`
+* `edge-connectivity`: `ϰ'(G)`，為 G 最小數量的 disconnecting set
+
+### Def - [S,T]
+
+![](./res/ch4/ch4-edge-cuts.jpg)
+
+
+

@@ -1,4 +1,4 @@
-<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
+<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
 <input id="tab1" type="radio" name="tabs" checked/>
 <label for="tab1">01-basic</label>
 
@@ -8,11 +8,26 @@
 <input id="tab3" type="radio" name="tabs"/>
 <label for="tab3">03-HararyGraph</label>
 
+<input id="tab4" type="radio" name="tabs"/>
+<label for="tab4">04-simple-graph</label>
+
+<input id="tab5" type="radio" name="tabs"/>
+<label for="tab5">05-3-regular</label>
+
+<input id="tab6" type="radio" name="tabs"/>
+<label for="tab6">06-S以及S補集</label>
+
+<input id="tab7" type="radio" name="tabs"/>
+<label for="tab7">07-bond</label>
+
+<input id="tab8" type="radio" name="tabs"/>
+<label for="tab8">08-block-internal-disjoint</label>
+
 <div class="content" id="content1"><p><h1>Basic</h1>
 <ul>
 <li>為第四章基礎部份，紀錄符號的使用</li>
 </ul>
-<h2>kappa ϰ(G)</h2>
+<h2>kappa ϰ(G) - Separating set</h2>
 <p>唸做 kappa, 是為 <code>connectivity</code>，為 G 的最小 vertex 集合: <code>S</code> 的 size，其性質為 <code>G-S</code> 時會出現 disconnect 的現象，或是 <code>G-S</code> 只剩下 1 個 vertex（若 G 為 complete graph 時）</p>
 <ul>
 <li>也就是 S 的 size 剛好是在構成 disconnect 要素的 threshold 上！</li>
@@ -49,6 +64,28 @@
 <p><img src="./res/ch4-basic-hyperprove.jpg" alt=""></p>
 <h3>HyperCube 增長維度方式</h3>
 <p><img src="./res/ch4-basic-hyperdim.jpg" alt=""></p>
+<h2>ϰ'(G) - Disconnecting set</h2>
+<ul>
+<li>
+<p>disconnecting set:</p>
+<ul>
+<li>為 <code>edge set</code>（相比屬於 vertex 集合的 separating set）</li>
+<li>標為 F (⊆ E(G))</li>
+<li>使 G-F 有 &gt; 1 以上的 component (使 G <code>disconnect</code> 的 edge set)</li>
+</ul>
+</li>
+<li>
+<p>若一個 graph 其每個 disconnecting set 至少有 k 個 edges:</p>
+<ul>
+<li>則稱此 graph 為 <code>k-edge-connected</code></li>
+</ul>
+</li>
+<li>
+<p><code>edge-connectivity</code>: <code>ϰ'(G)</code>，為 G 最小數量的 disconnecting set</p>
+</li>
+</ul>
+<h3>Def - [S,T]</h3>
+<p><img src="./res/ch4-edge-cuts.jpg" alt=""></p>
 </p></div><div class="content" id="content2"><p><h1>Prove kappa of hypercube</h1>
 <ul>
 <li>
@@ -60,5 +97,76 @@
 <img src="./res/ch4-basic-hyperkappa-2.jpg" alt=""></p>
 </li>
 </ul>
+<h2>探討 Case 2</h2>
+<ul>
+<li>理解： 由於 Q 為 hypercube 型式，切分兩個 component 的 S 與 <code>其中一側做聯集</code> 的大小至少為 k-1 （在 case 中由於以數歸法，所以探討為 k-1 維度）</li>
+<li>而 case 2 情況為扣除 S 之後，有一側會出現兩個 component；則可以知道，該側與 S 的聯集必定大於 k-1，形成 <code>聯集結果 &gt;= k</code> 的結果</li>
+<li>總和必要性與充份性，證實 <code>k 維度的 hypercube 的 kappa 等於 k</code></li>
+</ul>
 </p></div><div class="content" id="content3"><p><h1>Harary Graph</h1>
+<h2>Type</h2>
+<ul>
+<li>
+<p>性質 + Type 1
+<img src="./res/ch4-harary-1.jpg" alt=""></p>
+</li>
+<li>
+<p>Type 2
+<img src="./res/ch4-harary-2.jpg" alt=""></p>
+</li>
+<li>
+<p>Type 2
+<img src="./res/ch4-harary-3.jpg" alt=""></p>
+</li>
+</ul>
+<h2>Theorem - Harary Graph 的 edge 數量</h2>
+<p><img src="./res/ch4-harary-edges-1.jpg" alt=""></p>
+<p><img src="./res/ch4-harary-edges-2.jpg" alt=""></p>
+<p><img src="./res/ch4-harary-edges-3.jpg" alt=""></p>
+</p></div><div class="content" id="content4"><p><h1>Theorem</h1>
+<ul>
+<li>在 simple graph 中，探討 ϰ(G), ϰ'(G), mini-degree 之間的關係</li>
+</ul>
+<p><img src="./res/ch4-thm-kappa-1.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-kappa-2.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-kappa-3.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-kappa-4.jpg" alt=""></p>
+</p></div><div class="content" id="content5"><p><h1>Theorem: 3 regular graph</h1>
+<ul>
+<li>探討在 3-regular graph 情形下的狀況， <code>ϰ(G) = ϰ'(G)</code></li>
+</ul>
+<h2>Proof</h2>
+<p><img src="./res/ch4-thm-3regular-1.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-3regular-2.jpg" alt=""></p>
+</p></div><div class="content" id="content6"><p><h1>Proposition</h1>
+<ul>
+<li>探討 S 與 S的補集 間所有的 edges 數量</li>
+</ul>
+<p><img src="./res/ch4-count-edges.jpg" alt=""></p>
+<h2>Corollary</h2>
+<ul>
+<li>
+<p>若 G 為 simple graph 且 <code>|[S,S補集]| &lt; G 的 mini-degree</code>, S 不為空集合且屬於 G vertex set，則 <code>|S| &gt; G 的 mini-degree</code></p>
+</li>
+<li>
+<p>Proof</p>
+</li>
+</ul>
+<p><img src="./res/ch4-bond-proposition.jpg" alt=""></p>
+<p><img src="./res/ch4-bond-proposition-2.jpg" alt=""></p>
+</p></div><div class="content" id="content7"><p><h1>Def - <code>bond</code> 的定義</h1>
+<p><code>bond</code> 為一最小的 <code>non-empty</code> edge cut
+(e.g. =&gt; 為 cut-set, 並且其內部 <code>沒有任何其他的 proper subset 的 cut-set 存在</code>)</p>
+<h2>Proposition</h2>
+<p><img src="./res/ch4-bond-1.jpg" alt=""></p>
+<p><img src="./res/ch4-bond-2.jpg" alt=""></p>
+</p></div><div class="content" id="content8"><p><h2>Def - block</h2>
+<p><img src="./res/ch4-block.jpg" alt=""></p>
+<h2>Def - internally-disjoint</h2>
+<p><img src="./res/ch4-internal-disjoint.jpg" alt=""></p>
+<h2>Theorem</h2>
+<p><img src="./res/ch4-thm-internal-disjoint.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-internal-disjoint-2.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-internal-disjoint-3.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-internal-disjoint-4.jpg" alt=""></p>
 </p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>
