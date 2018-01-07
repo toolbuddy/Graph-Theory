@@ -53,5 +53,10 @@
 
 ![](./res/ch4/ch4-edge-cuts.jpg)
 
+### Def - line graph
 
+* 標記為 `L(G)`，表示為 graph G 的 line graph
+* 用以做 graph 的轉換（ 原本的 edge 會對應到 line graph 中的 vertex ）
+* 所以在後面 (**Theorem 4-2-19**) 的時候，就會用到 Line Graph 的這項性質！
+    * 並且在轉換時，會需要額外在端點加上偽 vertex，(讓原本端點 x,y 能夠搭配新加入的 vertex 形成 edge，並且轉換為 line graph 當中的 vertex )
 
