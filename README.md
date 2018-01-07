@@ -6,6 +6,7 @@ Notes/Implementation for course - graph theory.
     * 目前挑選較難、重點部份做整理
     * 未來有機會希望增加原始碼實作，藉此透過原始碼來分析時間複雜度、取代以往只看虛擬碼望梅止渴
 * 希望透過 `費曼學習法` 來讓理解更加清晰、務實，而非虛懂、硬背
+* 如果發現有誤、或是有需要補充之處，歡迎 fork 做修正、或是直接開啟 issue 反應給我，謝謝！
 
 # 使用
 * 主要使用 markdown to html 格式做教學頁面
@@ -15,6 +16,10 @@ Notes/Implementation for course - graph theory.
     * node.js
     * npm 套件：以 [`papogen`](https://github.com/toolbuddy/papoGen) 為主 (版本：`v0.0.18`)
         * 解決原本單檔轉換、圖源無法使用本地端的問題
+* 檔案結構
+    * `docs/`: 輸出的網站放置位置
+    * `res/`: 放置 local 端圖片使用（for markdown 使用）
+    * `src/`: 轉換來源依據，放置有 markdown 格式檔案；並再使用 papogen 後，能夠一次性轉換多個檔案；可以在 Makefile 中看到與以往轉換工具上的差異！
 
 # 目錄
 
