@@ -10,9 +10,11 @@ Notes/Implementation for course - graph theory.
 # 使用
 * 主要使用 markdown to html 格式做教學頁面
 * 系統需求
-    * GNU make
+    * (`Optional`)GNU make
+        * 也可以直接運行 Makefile 內的腳本
     * node.js
-    * npm 套件：以 [`papogen`](https://github.com/toolbuddy/papoGen) 為主
+    * npm 套件：以 [`papogen`](https://github.com/toolbuddy/papoGen) 為主 (版本：`v0.0.18`)
+        * 解決原本單檔轉換、圖源無法使用本地端的問題
 
 # 目錄
 

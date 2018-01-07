@@ -1,4 +1,4 @@
-<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
+<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
 <input id="tab1" type="radio" name="tabs" checked/>
 <label for="tab1">01-basic</label>
 
@@ -22,6 +22,15 @@
 
 <input id="tab8" type="radio" name="tabs"/>
 <label for="tab8">08-block-internal-disjoint</label>
+
+<input id="tab9" type="radio" name="tabs"/>
+<label for="tab9">09-Menger-Theorem</label>
+
+<input id="tab10" type="radio" name="tabs"/>
+<label for="tab10">10-Theorem-4-2-19</label>
+
+<input id="tab11" type="radio" name="tabs"/>
+<label for="tab11">11-Theorem-connectivity</label>
 
 <div class="content" id="content1"><p><h1>Basic</h1>
 <ul>
@@ -177,4 +186,48 @@
 </ul>
 <p><img src="./res/ch4-lemma-k-connected-1.jpg" alt=""></p>
 <p><img src="./res/ch4-lemma-k-connected-2.jpg" alt=""></p>
+</p></div><div class="content" id="content9"><p><h1>Theorem 4.2.17 - Menger Theorem</h1>
+<h2>性質</h2>
+<p><img src="./res/ch4-menger-1.jpg" alt=""></p>
+<h2>Proof</h2>
+<p><img src="./res/ch4-menger-proof-1.jpg" alt=""></p>
+<ul>
+<li>
+<p>Case 1
+<img src="./res/ch4-menger-proof-case1.jpg" alt=""></p>
+</li>
+<li>
+<p>Case 1-1
+<img src="./res/ch4-menger-proof-case1-1.jpg" alt=""></p>
+</li>
+<li>
+<p>Case 1-2
+<img src="./res/ch4-menger-proof-case1-2.jpg" alt=""></p>
+</li>
+<li>
+<p>Case 2 + Case 2-1
+<img src="./res/ch4-menger-proof-case2.jpg" alt=""></p>
+</li>
+<li>
+<p>Case 2-2
+<img src="./res/ch4-menger-proof-case2-2.jpg" alt=""></p>
+</li>
+<li>
+<p>Case 2-3
+<img src="./res/ch4-menger-proof-case2-3.jpg" alt=""></p>
+</li>
+</ul>
+<p><img src="./res/ch4-menger-proof-case2-3-1.jpg" alt=""></p>
+</p></div><div class="content" id="content10"><p><h1>Theorem 4.2.19</h1>
+<ul>
+<li>透過 <code>line graph</code> 性質來證明</li>
+</ul>
+<p><img src="./res/ch4-thm-4.2.19.jpg" alt=""></p>
+<h2>Proof</h2>
+<p><img src="./res/ch4-thm-4.2.19-proof.jpg" alt=""></p>
+</p></div><div class="content" id="content11"><p><h1>Theorem</h1>
+<p>計算 connectivity 以及 edge-connectivity ，以及 disjoint x,y-paths、 edge-disjoint x,y-paths 這兩對配對間大小</p>
+<p><img src="./res/ch4-thm-conn.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-conn-proof.jpg" alt=""></p>
+<p><img src="./res/ch4-thm-conn-proof-1.jpg" alt=""></p>
 </p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>
