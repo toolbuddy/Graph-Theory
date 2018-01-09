@@ -1,4 +1,4 @@
-<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
+<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><style>.tabs input[id=tab12]:checked~div[id=content12]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
 <input id="tab1" type="radio" name="tabs" checked/>
 <label for="tab1">01-basic</label>
 
@@ -31,6 +31,9 @@
 
 <input id="tab11" type="radio" name="tabs"/>
 <label for="tab11">11-Theorem-connectivity</label>
+
+<input id="tab12" type="radio" name="tabs"/>
+<label for="tab12">12-Theorem-ear</label>
 
 <div class="content" id="content1"><p><h1>Basic</h1>
 <ul>
@@ -103,6 +106,36 @@
 <ul>
 <li>並且在轉換時，會需要額外在端點加上偽 vertex，(讓原本端點 x,y 能夠搭配新加入的 vertex 形成 edge，並且轉換為 line graph 當中的 vertex )</li>
 </ul>
+</li>
+</ul>
+<h3>Def - ear</h3>
+<ul>
+<li>
+<p><code>ear</code></p>
+<ul>
+<li>為 graph 中的 maximal path, 且其內部的 vertices 的 degree 皆為 2 (不包括<code>端點</code>)</li>
+</ul>
+</li>
+<li>
+<p><code>ear decomposition</code></p>
+<ul>
+<li>為 graph 中由一個 cycle <code>P0</code> 開始，依序加入 <code>P1</code>, <code>P2</code>, ..., <code>Pk</code>，當後續加入的 Pi (當 i &gt; 1) 對目前 graph 而言為 <code>ear</code>，則稱為 ear decomposition（<strong>e.g.</strong> if k=2, 若 P2 為 <code>ear</code> 的話，則 <code>P0 ∪ P1 ∪ P2</code> 稱為 ear decompostion ）</li>
+</ul>
+</li>
+<li>
+<p><code>closed ear</code></p>
+<ul>
+<li>為一 cycle C 於 graph G 當中，並且這個 C 上除了一個跟 G 相接的 vertex (i.e. 這個 cycle 的起點與終點也是這個 vertex!)之外，<em>其餘 vertex 的 degree 皆為 2</em></li>
+</ul>
+</li>
+<li>
+<p><code>closed-ear decomposition</code></p>
+<ul>
+<li>和 <code>ear decomposition</code> 相同，只不過在這邊 Pi(i &gt; 1) 可以是為 <strong>open ear 或是 closed ear</strong></li>
+</ul>
+</li>
+<li>
+<p>ear/closed-ear 皆有 theorem，參考 ear theorem 頁籤</p>
 </li>
 </ul>
 </p></div><div class="content" id="content2"><p><h1>Prove kappa of hypercube</h1>
@@ -240,4 +273,64 @@
 <p><img src="./res/ch4-thm-conn.jpg" alt=""></p>
 <p><img src="./res/ch4-thm-conn-proof.jpg" alt=""></p>
 <p><img src="./res/ch4-thm-conn-proof-1.jpg" alt=""></p>
+</p></div><div class="content" id="content12"><p><p>這邊主要講述跟 ear 相關的幾個定理說明，包括 <code>ear</code>/<code>closed-ear</code>、<code>strong orientation</code></p>
+<h2>Theorem - ear</h2>
+<p>當一個 graph G 是為 <code>2-connected</code> 時，表示 G 有一個 <code>ear decomposition</code>; 並且每個 cycle 於 <code>2-connected</code> 的 graph 中皆為某個 <code>ear decomposition</code> 的 <strong>initial cycle</strong></p>
+<ul>
+<li>Proof:
+<ul>
+<li>先從 <code>Sufficiency</code> 證明起 （若 G 有 ear decomposition，則 graph 為 <code>2-connected</code>）</li>
+<li>假設現在 graph G 為 2-connected, 則 G 滿足條件：能夠再加入任何一個 ear 後保持 2-connected 的狀態 -&gt;
+<ul>
+<li>設現有的 graph G 狀態為 2-connected (i.e. 擁有 ear decomposition)</li>
+<li>則此時從上面找到兩點： u,v ，並且構成一個新的 ear : P (uv 間做 <code>subdivision</code> 的動作後，使得符合 ear 的定義：&quot;所有內部存在的 vertices ，其 degree 皆為 2&quot; 的條件)
+<ul>
+<li>subdivision 會保持 2-connected!</li>
+</ul>
+</li>
+<li>G + uv 仍為 2-connected（於此適用於繼續以相同方式加入 ear! graph G <strong>仍會保持 2-connected</strong>）</li>
+</ul>
+</li>
+<li>再來是 <code>Necessity</code> 的部份 （若 G 有 2-connected，則表示 G 有 ear decomposition）</li>
+<li>假設目前存在一個 graph G，其為 2-connected； 且存在一個 Cycle <code>C</code> 於 G 當中</li>
+<li>則此時從這個 cycle C 作為 ear decomposition 的 initial cycle 開始，逐一加入 ear 進去；做一個 iterative 的動作；
+<ul>
+<li>iterative 動作：</li>
+<li>挑選非目前 ear decomposition 的兩個 vertices（<code>u,v</code>），再從 ear decomposition 上挑選兩個 vertices（<code>x,y</code>）</li>
+<li>使這 4點 構成一個 cycle，這麼一來就形成新的 ear decomposition 了！</li>
+</ul>
+</li>
+<li>停止條件為，<em>當目前的 ear decomposition</em> 等於當初的 graph G 時，就停止
+<ul>
+<li>所以當 iterative process 結束時，便可得到一個擁有 2-connected 性質的 ear decomposition - G</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Theorem - closed-ear</h2>
+<p>當一個 graph G 是為 <code>2-edge-connected</code> 時，表示 G 有一個 <code>closed-ear decomposition</code>; 並且每個 cycle 於 <code>2-edge-connected</code> 的 graph 中皆為某個 <code>decomposition</code> 的 <strong>initial cycle</strong></p>
+<p>（跟上面的定理類似，只是從原本針對 vertex 的 2-connected 換成 2-edge-connected）</p>
+<h2>Theorem - strong orientation</h2>
+<p>當 graph G 存在強方向性（該 graph 中所有的 undirected edge 全部替換成 directed 時稱之），則表示 G 為 <em><strong>2-edge-connected</strong></em>!</p>
+<ul>
+<li>Proof
+<ul>
+<li><code>Necessity</code>：
+<ul>
+<li>當 graph G 存在 strong orientation 時，表示 G 不可能為 disconnected、並且不存在 <code>cut-edge</code>!
+( strongly orientation 的性質其中就有 <code>bridgeless</code>，所以不會存在兩個 component 之間只有單向的 directed edge 存在的情形 )</li>
+</ul>
+</li>
+<li><code>Sufficiency</code>:
+<ul>
+<li>當 graph G 有 <code>2-edge-connected</code> 性質存在時，則其有一個 <code>closed-ear-decomposition</code> =&gt;</li>
+<li>跟前面 ear 的定理證明類似，從 initial cycle 出發，把 initial cycle 上所有的 edge 做 orient，形成必要條件: strongly orientation</li>
+<li>接著再一一加入<code>新的 ear</code>（跟前面的加入方式相同），並把這些新 ear 上面 edges 做 orient</li>
+<li>藉此可以得證！</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>

@@ -60,3 +60,15 @@
 * 所以在後面 (**Theorem 4-2-19**) 的時候，就會用到 Line Graph 的這項性質！
     * 並且在轉換時，會需要額外在端點加上偽 vertex，(讓原本端點 x,y 能夠搭配新加入的 vertex 形成 edge，並且轉換為 line graph 當中的 vertex )
 
+### Def - ear
+
+* `ear`
+    * 為 graph 中的 maximal path, 且其內部的 vertices 的 degree 皆為 2 (不包括`端點`)
+* `ear decomposition`
+    * 為 graph 中由一個 cycle `P0` 開始，依序加入 `P1`, `P2`, ..., `Pk`，當後續加入的 Pi (當 i > 1) 對目前 graph 而言為 `ear`，則稱為 ear decomposition（**e.g.** if k=2, 若 P2 為 `ear` 的話，則 `P0 ∪ P1 ∪ P2` 稱為 ear decompostion ）
+* `closed ear`
+    * 為一 cycle C 於 graph G 當中，並且這個 C 上除了一個跟 G 相接的 vertex (i.e. 這個 cycle 的起點與終點也是這個 vertex!)之外，*其餘 vertex 的 degree 皆為 2*
+* `closed-ear decomposition`
+    * 和 `ear decomposition` 相同，只不過在這邊 Pi(i > 1) 可以是為 **open ear 或是 closed ear**
+
+* ear/closed-ear 皆有 theorem，參考 ear theorem 頁籤
