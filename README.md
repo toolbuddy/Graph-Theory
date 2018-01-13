@@ -31,7 +31,7 @@ Notes/Implementation for course - graph theory.
 
 ### 新版
 
-* [第三章整理](https://toolbuddy.github.io/Graph-Theory/matching-factor)
+* [第三章整理](https://toolbuddy.github.io/Graph-Theory/matching-factor/index.html)
 
 ### 舊版
 * Hall's Condition
