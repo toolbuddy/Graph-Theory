@@ -20,6 +20,7 @@ Notes/Implementation for course - graph theory.
     * `docs/`: 輸出的網站放置位置
     * `res/`: 放置 local 端圖片使用（for markdown 使用）
     * `src/`: 轉換來源依據，放置有 markdown 格式檔案；並再使用 papogen 後，能夠一次性轉換多個檔案；可以在 Makefile 中看到與以往轉換工具上的差異！
+        * 位於 `src/` 底下的目錄名稱為章節，可以在底下任意加上 markdown 檔案（`檔名即為標題`！）
 
 # 目錄
 
