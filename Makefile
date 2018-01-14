@@ -3,7 +3,7 @@ DOCS_LAYOUT = thomasf-solarizedcsslight
 CH3 = matching-factor
 CH4 = connectivity-path
 
-all: $(CH3) $(CH4)
+all: ch3 ch4
 
 ch3:
 	cd docs/ && npm install 
