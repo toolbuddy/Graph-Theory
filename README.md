@@ -48,6 +48,8 @@ Notes/Implementation for course - graph theory.
 
     | 名稱 | 重要性 | 備註 |
     | ------ | ------ | ------ |
+    | Hall's condition | 🌟🌟🌟🌟🌟 | |
+    | Tutte's theorem | 🌟🌟🌟🌟🌟 | |
     | vertex cover >= matching | 🌟🌟 | 當等號成立時，表示最佳化； 並且在 bipartite 時， 等號成立 |
     | Lemma 3.1.21 | 🌟🌟🌟  | α(G) + β(G) = n(G) | 
     | Theorem 3.1.22 | 🌟🌟🌟 | α'(G) + β'(G) = n(G) |

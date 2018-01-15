@@ -8,7 +8,7 @@
 * Type 2
 ![](./res/ch4/ch4-harary-2.jpg)
 
-* Type 2
+* Type 3
 ![](./res/ch4/ch4-harary-3.jpg)
 
 
