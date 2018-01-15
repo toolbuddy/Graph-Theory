@@ -44,6 +44,23 @@ Notes/Implementation for course - graph theory.
 
 * [第三章整理](https://toolbuddy.github.io/Graph-Theory/matching-factor/index.html)
 
+* 重點列表：
+
+    | 名稱 | 重要性 | 備註 |
+    | ------ | ------ | ------ |
+    | |vertex cover| >= |matching| | 🌟🌟 | 當等號成立時，表示最佳化； 並且在 bipartite 時， 等號成立 |
+    | Lemma 3.1.21 | 🌟🌟🌟  | α(G) + β(G) = n(G) | 
+    | Theorem 3.1.22 | 🌟🌟🌟 | α'(G) + β'(G) = n(G) |
+    | Corollary ( 3.1.21 + 3.1.22 ) | 🌟🌟🌟🌟 | α(G) = β'(G) | 
+    | Augmenting Path Algorithm | 🌟🌟🌟🌟🌟 | 產生 `M-augmenting path (maximum matching)` 及 `vertex cover, R = T U (X-S)` |
+    | 匈牙利演算法 | 🌟🌟🌟🌟🌟 | 從 weighted bipartite matching 中找出 weight cost 總和最大的 traversal (Assignment Problem)； （e.g. 得到 maximum weight matching 及 minimum cost cover） |
+    | Gale-Shapley Proposal Algorithm | 🌟 | 配對問題（擇偶優先序） |
+    | factor | 🌟🌟🌟 | 為該圖中的一個 spanning subgraph； 所以當一個圖存在 `k-factor` 時，等同於 `k-regular` subgraph |
+    | 2-factor algorithm | 🌟🌟🌟 | Theorem: 每個擁有 **even degree** 的 regular graph，其都會有一個 **2-factor** 的存在  |
+    | Corollary of Tutte theorem | 🌟🌟 | 每個 3-regular，且沒有 cut-edge 存在的 graph，擁有 1-factor （perfect matching） | 
+    | Factor transformation | 🌟🌟🌟 | f-factor 轉換成 1-factor 的手法 |
+    | Edmond's Blossom Algorithm | 🌟🌟 | |
+
 ### 舊版
 * Hall's Condition
     * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/hall-condition/)
@@ -74,8 +91,8 @@ Notes/Implementation for course - graph theory.
     | edge cut/ vertex cut | 🌟🌟🌟 | S 與 S 補集間的 edge 數量計算 | 
     | bond | 🌟 | | 
     | block | 🌟 | |
-    | line graph | 🌟🌟 | |
-    | **k-connected** 與 **k 條 internally disjoint paths** | 🌟🌟🌟 | 其數量性質 |
+    | line graph | 🌟🌟 | edge 縮合而成 vertex 的轉換過程 |
+    | **k-connected** 與 **k 條 internally disjoint paths** | 🌟🌟🌟 | 其數量性質；以及 pair of edges 皆於`同個 cycle`上的等價性質 |
     | Menger Theorem | 🌟🌟🌟🌟🌟 | `ϰ(x,y) = λ(x,y)` |
     | Menger Theorem (edge) | 🌟🌟🌟🌟🌟 | `ϰ'(x,y) = λ'(x,y)`, 用 line graph 的性質來做轉換後套用 Menger Theorem! | 
     | connectivity 的性質 | 🌟🌟🌟🌟🌟 | connectivity: `ϰ`; edge-connectivity: `ϰ'` | 

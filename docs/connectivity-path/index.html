@@ -220,7 +220,7 @@
 <p><img src="./res/ch4-block.jpg" alt=""></p>
 <h2>Def - internally-disjoint</h2>
 <p><img src="./res/ch4-internal-disjoint.jpg" alt=""></p>
-<h2>Theorem</h2>
+<h2>Theorem - 4.2.2</h2>
 <p><img src="./res/ch4-thm-internal-disjoint.jpg" alt=""></p>
 <p><img src="./res/ch4-thm-internal-disjoint-2.jpg" alt=""></p>
 <p><img src="./res/ch4-thm-internal-disjoint-3.jpg" alt=""></p>
@@ -232,6 +232,29 @@
 </ul>
 <p><img src="./res/ch4-lemma-k-connected-1.jpg" alt=""></p>
 <p><img src="./res/ch4-lemma-k-connected-2.jpg" alt=""></p>
+<h2>Theorem - equivalent 情況</h2>
+<p>對於一個擁有<strong>至少3個 vertices 以上的</strong> graph G 來說，以下情況為等價：</p>
+<p>A) G 為 connected 且沒有 cut-vertex</p>
+<p>B) 對於屬於 G 的 vertex <code>x,y,</code>， 內部存在不相交的 x,y-paths</p>
+<p>C) 對於屬於 G 的 vertex <code>x,y,</code>, 存在一個 cycle 穿過 x,y</p>
+<p>D) δ(G) &gt;= 1，且所有 pair of edges 會剛好在同一個 cycle 上 （e.g. 一定存在一 cycle 經過這 2 條配對邊）</p>
+<h4>Prove - A) &lt;=&gt; B)</h4>
+<p>由 Theorem 4.2.2 （上面）來做證明！ 說明 A 與 B 互為等價</p>
+<h4>Prove - B) &lt;=&gt; C)</h4>
+<p>透過兩條 disjoint 的 x,y-paths 來組合這個通過的 cycle</p>
+<h4>Prove - D) =&gt; C)</h4>
+<ul>
+<li>從 <code>δ(G) &gt;= 1</code> 可以知道， x 和 y 不是<code>孤立點</code></li>
+<li>再透過 D 內性質： pair of edges 落在同一個 cycle 上來說明，存在一 cycle 穿過 x,y</li>
+</ul>
+<h4>Prove - A) ^ C) =&gt; D)</h4>
+<ul>
+<li>G 若為 connected，則表示 δ(G) &gt;= 1 （D 的性質）</li>
+<li>再來考慮兩條 edges: uv, xy</li>
+<li>透過 subdivision 的方式從中生出一個中間點 w,z ；透過新生成的這兩條 edge: <code>uwv, xzy</code> 來構成 cycle （ by <code>性質 C</code>）</li>
+<li>接著再刪除 subdivision 產生的新 vertex，來還原成原本的 edges；而這時可以知道，仍為兩條 disjoint edge； 那麼就可以證實， 原先這兩條 uv, xy 在這個 cycle 上（只是透過原先 uv, xy 來取代生成 cycle 的 <code>uwv, xzy</code>）</li>
+<li>這樣就可以完成由 <em>A 和 C 的聯集等價於 D</em> 的結論</li>
+</ul>
 </p></div><div class="content" id="content9"><p><h1>Theorem 4.2.17 - Menger Theorem</h1>
 <h2>性質</h2>
 <ul>
