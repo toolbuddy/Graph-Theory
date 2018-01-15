@@ -1,4 +1,4 @@
-<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><style>.tabs input[id=tab12]:checked~div[id=content12]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
+<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><style>.tabs input[id=tab12]:checked~div[id=content12]{display:block}</style><style>.tabs input[id=tab13]:checked~div[id=content13]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
 <input id="tab1" type="radio" name="tabs" checked/>
 <label for="tab1">01-basic</label>
 
@@ -34,6 +34,9 @@
 
 <input id="tab12" type="radio" name="tabs"/>
 <label for="tab12">12-Theorem-ear</label>
+
+<input id="tab13" type="radio" name="tabs"/>
+<label for="tab13">13-Lemma-4-2-22</label>
 
 <div class="content" id="content1"><p><h1>Basic</h1>
 <ul>
@@ -337,4 +340,8 @@
 </ul>
 </li>
 </ul>
+</p></div><div class="content" id="content13"><p><h2>Lemma 4.2.22</h2>
+<p>主要證實性質： graph 在扣除<strong>一條</strong> edge 後，最多減少 1 個 connectivity !</p>
+<p>=&gt; <strong>ϰ(G - xy) &lt;= ϰ(G)</strong>，透過指出兩種情況： <code>ϰ(G - xy) = ϰ(G)</code> 以及 <code>ϰ(G - xy) = ϰ(G) - 1</code> 來做說明</p>
+<p><img src="./res/ch4-lemma-4-2-22.jpg" alt=""></p>
 </p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>

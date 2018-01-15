@@ -63,6 +63,28 @@ Notes/Implementation for course - graph theory.
 
 * [第四章整理](https://toolbuddy.github.io/Graph-Theory/connectivity-path)
 
+* 重點列表:
+
+    | 名稱 | 重要性 | 備註 |
+    | ------ | ------ | ------ |
+    | Hypercube | 🌟🌟 | 建構方式、以及性質 | 
+    | Harary Graph | 🌟🌟 | 三種變形以及性質 | 
+    | ϰ(G) ≤ ϰ'(G) ≤ δ(G)  | 🌟🌟🌟🌟 | G 為 simple graph | 
+    | ϰ(G) == ϰ'(G) | 🌟🌟🌟🌟 | G 為 3-regular graph 時 | 
+    | edge cut/ vertex cut | 🌟🌟🌟 | S 與 S 補集間的 edge 數量計算 | 
+    | bond | 🌟 | | 
+    | block | 🌟 | |
+    | line graph | 🌟🌟 | |
+    | **k-connected** 與 **k 條 internally disjoint paths** | 🌟🌟🌟 | 其數量性質 |
+    | Menger Theorem | 🌟🌟🌟🌟🌟 | `ϰ(x,y) = λ(x,y)` |
+    | Menger Theorem (edge) | 🌟🌟🌟🌟🌟 | `ϰ'(x,y) = λ'(x,y)`, 用 line graph 的性質來做轉換後套用 Menger Theorem! | 
+    | connectivity 的性質 | 🌟🌟🌟🌟🌟 | connectivity: `ϰ`; edge-connectivity: `ϰ'` | 
+    | ear | 🌟🌟 | open/closed-ear |
+    | x,U-fan | 🌟🌟 | |
+    | Network flow | 🌟🌟🌟🌟 | f-augmenting path 的定義； flow capacity； maximum flow (e.g. `feasible flow`)的計算 |
+    | Max-flow Min-cut | 🌟🌟🌟🌟 | a.k.a `Ford-Fulkerson Theorem` | 
+
+
 * 小註解區：
     * `k-factor`:
         * 為第三章的名詞，主要表示該 graph 還能夠衍生出幾種 **與原圖不同** 且使用了相同 vertex、 edge set 的圖；
