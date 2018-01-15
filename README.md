@@ -22,13 +22,23 @@ Notes/Implementation for course - graph theory.
     * `src/`: 轉換來源依據，放置有 markdown 格式檔案；並再使用 papogen 後，能夠一次性轉換多個檔案；可以在 Makefile 中看到與以往轉換工具上的差異！
         * 位於 `src/` 底下的目錄名稱為章節，可以在底下任意加上 markdown 檔案（`檔名即為標題`！）
 
+> 使用了自製的 papoGen，不再需要一個個產生！
+
 # 目錄
 
 ## Chapter 1
 
+> 待補上
+
+---
+
 ## Chapter 2
 
-## Chapter 3
+> 待補上
+
+---
+
+## Chapter 3 (Matching & factor)
 
 ### 新版
 
@@ -47,8 +57,20 @@ Notes/Implementation for course - graph theory.
 * 2 factor algorithm
     * [理論推導](https://toolbuddy.github.io/Graph-Theory/matching-factor/2-factor-algo/)
 
-## Chapter 4
+---
 
-> 使用了自製的 papoGen，不再需要一個個產生！
+## Chapter 4 (Connectivity & path)
 
 * [第四章整理](https://toolbuddy.github.io/Graph-Theory/connectivity-path)
+
+* 小註解區：
+    * `k-factor`:
+        * 為第三章的名詞，主要表示該 graph 還能夠衍生出幾種 **與原圖不同** 且使用了相同 vertex、 edge set 的圖；
+            > k-factor of a graph, is a `k-regular subgraph` of order n
+        * 這也解釋為何 ***"perfect matching"*** 為 `1-factor` 的原因
+        * 而 cycle 為 `2-factor` 
+    * `k-connected`:
+        * 而到第四章的部份時，則表示該 graph 在扣除 k 個 vertices 後，將會出現 **disconnect** 的情形 （等價於： 在扣除 `k-1 vertices` 的情況下，不會出現 **disconnect** ）
+        * 而從等價的敘述中可以推得以下的特性： 在 connectivity = k 的 graph 中，我們可以稱之為 `1,2, ... k-1`-connected !! （因為都可以符合等價中的敘述！）但反過來的列式則不能成立！（若某 graph 為 k-connected 來推其為 connectivity = k， 這項命題則為 **否**！！）
+
+---
