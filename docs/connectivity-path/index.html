@@ -261,9 +261,19 @@
 </p></div><div class="content" id="content9"><p><h1>Theorem 4.2.17 - Menger Theorem</h1>
 <h2>性質</h2>
 <ul>
-<li>兩點之間的 vertex cut 的最小值: <code>ϰ(x,y)</code>，會等於其內部 pairwise disjoint x,y path（內部<code>成對</code>、<code>不相交</code>，<code>不使用共同 vertex</code>的 paths ） 的數量最大值: <code>λ(x,y)</code></li>
+<li>
+<p>兩點之間的 vertex cut 的最小值: <code>ϰ(x,y)</code>，會等於其內部 pairwise disjoint x,y path（內部<code>成對</code>、<code>不相交</code>，<code>不使用共同 vertex</code>的 paths ） 的數量最大值: <code>λ(x,y)</code></p>
+</li>
+<li>
+<p>主要概念： 若存在兩點 x,y 並且他們之間不存在互相連通的 edge 時，這個時候我們便可以套用 <em><strong>Menger</strong></em> 定理！</p>
+<ul>
+<li>透過兩點之間的 pairwise disjoint path、以及 vertex cut 間的關係來說明幾項特性！</li>
+<li>像是 <code>subdivision</code>、<code>line graph</code> 等動作，都是為了要達到 Menger Theorem 所需要的狀態： <strong>兩個不相鄰的 vertices</strong>，所加入的額外操作！</li>
+</ul>
+</li>
 </ul>
 <p>=&gt; <code>ϰ(x,y) = λ(x,y)</code> by <em><strong>Menger 定理</strong></em></p>
+<p>=&gt; <code>ϰ'(x,y) = λ'(x,y)</code> by <em><strong>Menger 定理(Edge 版本)， Theorem 4.2.19</strong></em> （這個就透過 <code>line graph</code> 來從 edge 轉換成 vertex 後套用 Menger 定理來證明！ ）</p>
 <p><img src="./res/ch4-menger-1.jpg" alt=""></p>
 <h2>Proof</h2>
 <ul>
@@ -296,6 +306,7 @@
 </p></div><div class="content" id="content10"><p><h1>Theorem 4.2.19</h1>
 <ul>
 <li>透過 <code>line graph</code> 性質來證明</li>
+<li>等同於 Menger Theorem 的 edge 版本</li>
 </ul>
 <p><img src="./res/ch4-thm-4.2.19.jpg" alt=""></p>
 <h2>Proof</h2>

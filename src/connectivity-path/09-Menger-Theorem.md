@@ -4,7 +4,13 @@
 
 * 兩點之間的 vertex cut 的最小值: `ϰ(x,y)`，會等於其內部 pairwise disjoint x,y path（內部`成對`、`不相交`，`不使用共同 vertex`的 paths ） 的數量最大值: `λ(x,y)`
 
+* 主要概念： 若存在兩點 x,y 並且他們之間不存在互相連通的 edge 時，這個時候我們便可以套用 ***Menger*** 定理！
+    * 透過兩點之間的 pairwise disjoint path、以及 vertex cut 間的關係來說明幾項特性！
+    * 像是 `subdivision`、`line graph` 等動作，都是為了要達到 Menger Theorem 所需要的狀態： **兩個不相鄰的 vertices**，所加入的額外操作！
+
 => `ϰ(x,y) = λ(x,y)` by ***Menger 定理***
+
+=> `ϰ'(x,y) = λ'(x,y)` by ***Menger 定理(Edge 版本)， Theorem 4.2.19*** （這個就透過 `line graph` 來從 edge 轉換成 vertex 後套用 Menger 定理來證明！ ）
 
 ![](./res/ch4/ch4-menger-1.jpg)
 
