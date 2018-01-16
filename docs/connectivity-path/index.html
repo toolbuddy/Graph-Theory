@@ -1,4 +1,4 @@
-<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><style>.tabs input[id=tab12]:checked~div[id=content12]{display:block}</style><style>.tabs input[id=tab13]:checked~div[id=content13]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
+<!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch4</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><style>.tabs input[id=tab6]:checked~div[id=content6]{display:block}</style><style>.tabs input[id=tab7]:checked~div[id=content7]{display:block}</style><style>.tabs input[id=tab8]:checked~div[id=content8]{display:block}</style><style>.tabs input[id=tab9]:checked~div[id=content9]{display:block}</style><style>.tabs input[id=tab10]:checked~div[id=content10]{display:block}</style><style>.tabs input[id=tab11]:checked~div[id=content11]{display:block}</style><style>.tabs input[id=tab12]:checked~div[id=content12]{display:block}</style><style>.tabs input[id=tab13]:checked~div[id=content13]{display:block}</style><style>.tabs input[id=tab14]:checked~div[id=content14]{display:block}</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch4</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
 <input id="tab1" type="radio" name="tabs" checked/>
 <label for="tab1">01-basic</label>
 
@@ -37,6 +37,9 @@
 
 <input id="tab13" type="radio" name="tabs"/>
 <label for="tab13">13-Lemma-4-2-22</label>
+
+<input id="tab14" type="radio" name="tabs"/>
+<label for="tab14">14-Network flow</label>
 
 <div class="content" id="content1"><p><h1>Basic</h1>
 <ul>
@@ -367,4 +370,88 @@
 <p>主要證實性質： graph 在扣除<strong>一條</strong> edge 後，最多減少 1 個 connectivity !</p>
 <p>=&gt; <strong>ϰ(G - xy) &lt;= ϰ(G)</strong>，透過指出兩種情況： <code>ϰ(G - xy) = ϰ(G)</code> 以及 <code>ϰ(G - xy) = ϰ(G) - 1</code> 來做說明</p>
 <p><img src="./res/ch4-lemma-4-2-22.jpg" alt=""></p>
+</p></div><div class="content" id="content14"><p><h2>Network Flow</h2>
+<ul>
+<li>
+<p>每條 edge 上都會有一個實際的 flow 值（<code>f(e)</code>），以及 capacity 的值（<code>cap(e)</code> or <code>c(e)</code>）</p>
+</li>
+<li>
+<p>起始點： <code>source vertex (s)</code>； 終點： <code>sink vertex (t)</code></p>
+<ul>
+<li>每個 vertex 可稱為 <code>node</code></li>
+<li>而每個 node <code>v</code> 都會有流進與流出，分別標示為 <code>f-(v)</code> 以及 <code>f+(v)</code> （注意： 流進是帶負號的！）</li>
+</ul>
+</li>
+<li>
+<p>並且有兩種方向：</p>
+<ul>
+<li>從 source 到 sink 的稱之為 <code>forward path</code>； 而反過來的則稱為 <code>backward path</code></li>
+</ul>
+</li>
+<li>
+<p>當一個 flow 為 feasible 時，表示其滿足：</p>
+<ul>
+<li><code>0 &lt;= f(e) &lt;= c(e)</code></li>
+<li>且除了 s,t 之外的 node，都滿足 <code>流進</code> = <code>流出</code></li>
+</ul>
+</li>
+<li>
+<p>而由於除了 s,t 之外的節點都是持平，所以我們計算一個 flow：<code>f</code> 值（ 標記為 <code>val(f)</code> ）的時候，針對 <em>sink vertex</em> 做運算即可： <code>f-(t) - f+(t)</code></p>
+<ul>
+<li>並且在 <code>val(f)</code> 達最大值時，表示此 flow 為 <em><strong>feasible flow 中的 <code>maximum flow</code></strong></em></li>
+</ul>
+</li>
+<li>
+<p>f-augmenting path &amp; <code>tolerance: z</code>:</p>
+<ul>
+<li>表示現階段的這條 flow 不是最佳解，還能夠增加 cap !</li>
+<li>接下來我們來看 f-augmenting path 的定義；需要滿足以下條件，才可稱為 f-augmenting path：
+<ul>
+<li>若此時為 <code>forward</code> direction: 則 <code>f(e) &lt; c(e)</code></li>
+<li>若此時為 <code>backward</code> direction: 則 <code>f(e) &gt; 0</code></li>
+</ul>
+</li>
+<li>滿足以上條件，並且能夠從 source vertex 到 sink vertex 皆滿足，則此條路徑可稱為 <em>f-augmenting path</em>!</li>
+<li>如此我們可以計算其中的 <strong>tolerance: z</strong>:
+<ul>
+<li>tolerance 計算方式：
+<ul>
+<li><code>forward</code>: z = <code>c(e) - f(e)</code></li>
+<li><code>backward</code>: z = <code>f(e)</code></li>
+</ul>
+</li>
+<li>然後取得 path 上 z 的<code>最小值</code>，便是 tolerance</li>
+</ul>
+</li>
+<li>而有了 tolerance 後，我們可以重新計算、改變這條 f-augmenting path( <code>f</code> )成為更加 <code>feasible</code> 的解 ( <code>f'</code> ) :
+<ul>
+<li>forward 的 edge 皆 <code>+z</code>； backward 的 edge 則 <code>-z</code>；</li>
+<li>所以新的 val: <em><strong>val(f') = val(f) + z</strong></em></li>
+<li>會比舊有的值多出 z！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>source/sink cut [S,T]</p>
+<ul>
+<li>為切分 source, sink 的 <code>edge cut</code></li>
+<li>只包含 <code>forward</code> 的 edge ！</li>
+<li>並且當 flow: f 為 feasible 時，會符合：
+<ul>
+<li><code>val(f) &lt;= cap(S,T)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Max-flow Min-cut Theorem （Ford and Fulkerson）</code>:</p>
+<ul>
+<li>這個定理是上面尋找 f-augmenting path 並轉換為 more feasible 解的演算法</li>
+<li>主要從輸入的 graph （network flow）中找到 <code>f-augmenting path</code> 後，透過運算獲得 tolerance 後更新這條 f-augmenting path</li>
+<li>直到沒有 f-augmenting path 存在後，即可從現有的 source-sink path 當中，找到最大值的 <code>val</code>，即可宣稱其為 network 中***最大的 feasible flow 值***，或是 <em><strong>最小的 source/sink cut 的 capacity</strong></em></li>
+<li>val(f) = f+(S) - f-(S) = f+(S) = cap(S,T)</li>
+</ul>
+</li>
+</ul>
 </p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>

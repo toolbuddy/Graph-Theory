@@ -3,13 +3,16 @@
 <label for="tab1">2 factor algorithm</label>
 
 <input id="tab2" type="radio" name="tabs"/>
-<label for="tab2">Hall Condition</label>
+<label for="tab2">Augmenting Path Algorithm</label>
 
 <input id="tab3" type="radio" name="tabs"/>
-<label for="tab3">α(G) = β'(G)</label>
+<label for="tab3">Hall Condition</label>
 
 <input id="tab4" type="radio" name="tabs"/>
-<label for="tab4">Tutte Theorem</label>
+<label for="tab4">α(G) = β'(G)</label>
+
+<input id="tab5" type="radio" name="tabs"/>
+<label for="tab5">Tutte Theorem</label>
 
 <div class="content" id="content1"><p><h1>2 Factor Algorithm</h1>
 <p>最主要的概念即為 <code>把 2*k - regular graph 轉換成 2 個 k-factor</code></p>
@@ -46,7 +49,40 @@
 <p>再從整個角度下去看，在 <code>G'</code> 中 <code>k 個 perfect matching</code> 則會對應到 <code>G</code> 上，成為 <code>k 個 2-factor</code> 存在</p>
 </li>
 </ul>
-</p></div><div class="content" id="content2"><p><h1>Hall's Condition</h1>
+</p></div><div class="content" id="content2"><p><h2>Augmenting Path Algorithm</h2>
+<p>輸入為一個 bipartite，分別擁有 X、Y 兩個 partite set</p>
+<ul>
+<li>
+<p>使用到的集合：</p>
+<ul>
+<li>U： augmenting path 尚未感染到的 X 集合</li>
+<li>S： 被來自 U 的 M-alternating path 所觸及到集合（於 X 之中）</li>
+<li>T： 被來自 U 的 M-alternating path 所觸及到集合（於 Y 之中）</li>
+</ul>
+</li>
+<li>
+<p>Initial:</p>
+<ul>
+<li>U = X, T = 空集合, 並且 S = U</li>
+</ul>
+</li>
+<li>
+<p>Iteration:</p>
+<ul>
+<li>開始從 U 中選擇沒被感染的 X 集合來做找尋</li>
+<li>其中在找到 matching 時，會置於 S 之中</li>
+<li>若在 iteration 結束時，仍有<strong>未被感染的 vertices 存在</strong>，則表示可能還存在 M-augmenting path</li>
+<li>這時找目前已標記（ S 集合）的 vertices 中做嘗試；從未被感染的 vertices 開始走，照著 M, M-alternating path 的交錯方式，在 X, Y 之間走，找尋是否有其他合適的 augmenting path 存在
+<ul>
+<li>注意：這邊之所以再 iteration 中無法被感染的 vertices，大多數是其可觸及的 T （Y 內已感染的集合）已經都有所屬了</li>
+<li>所以藉此找到 <code>M-augmenting path</code> 來</li>
+</ul>
+</li>
+<li>當存在 augmenting path 時，則可以做 M/M-alternating path 的互換，產生最大 matching</li>
+</ul>
+</li>
+</ul>
+</p></div><div class="content" id="content3"><p><h1>Hall's Condition</h1>
 <p>一個 X,Y 的 bipartite graph G，擁有一個感染了所有 X partite set 內 vertices 的 Matching 的條件是必須符合 <code>| S | ≤ | N(S) |</code> ，S 屬於 X partite set ( N(S) 則屬於 Y partite set )</p>
 <h2>推導</h2>
 <p>證明通常在條件的情況下，可以由正向（必要性）、及反向（充份性）來做推導的方向，並依據方向做後續的證明動作</p>
@@ -117,7 +153,7 @@
 
 （等價於前面提到的 &quot;非 q -&gt; 非 p&quot;）
 </code></pre>
-</p></div><div class="content" id="content3"><p><h1>α(G) = β'(G)</h1>
+</p></div><div class="content" id="content4"><p><h1>α(G) = β'(G)</h1>
 <pre><code>標住符號使用：
 
 α(G)    ： maximum independent set
@@ -166,7 +202,7 @@
 <pre><code>所以可以得到 -&gt; 
 當 G 是為 bipartite graph 且沒有 isolated vertices 時，maximum independent set 等於 minimum edge cover!
 </code></pre>
-</p></div><div class="content" id="content4"><p><h1>Tutte's theorem</h1>
+</p></div><div class="content" id="content5"><p><h1>Tutte's theorem</h1>
 <p>由 Tutte 於 1947 年提出，理論為 <code>A graph G has a 1-factor iff o(G-S)&lt;=|S| for every S ⊆ V(G)</code>，而是理論也稱為該 graph G 的 <code>Tutte's Condition</code></p>
 <ul>
 <li><code>o(G)</code>: 表示 graph G 的 odd components 的數量</li>
