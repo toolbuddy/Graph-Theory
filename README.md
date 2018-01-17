@@ -46,27 +46,22 @@ Notes/Implementation for course - graph theory.
 
 * 重點列表：
 
-    | 名稱 | 重要性 | 備註 |
-    | ------ | ------ | ------ |
-    | Hall's condition | 🌟🌟🌟🌟🌟 | (在上方連結有詳細) |
-    | Tutte's theorem | 🌟🌟🌟🌟🌟 | (在上方連結有詳細) |
-    | vertex cover >= matching | 🌟🌟 | 當等號成立時，表示最佳化； 並且在 bipartite 時， 等號成立 |
-    | Lemma 3.1.21 | 🌟🌟🌟  | α(G) + β(G) = n(G) | 
-    | Theorem 3.1.22 | 🌟🌟🌟 | α'(G) + β'(G) = n(G) |
-    | Corollary ( 3.1.21 + 3.1.22 ) | 🌟🌟🌟🌟 | α(G) = β'(G) | 
-    | Augmenting Path Algorithm | 🌟🌟🌟🌟🌟 | 產生 `M-augmenting path (maximum matching)` 及 `vertex cover, R = T U (X-S)` |
-    | 匈牙利演算法 | 🌟🌟🌟🌟🌟 | 從 weighted bipartite matching 中找出 weight cost 總和最大的 traversal (Assignment Problem)； （e.g. 得到 maximum weight matching 及 minimum cost cover） |
-    | Gale-Shapley Proposal Algorithm | 🌟 | 配對問題（擇偶優先序） |
-    | factor | 🌟🌟🌟 | 為該圖中的一個 spanning subgraph； 所以當一個圖存在 `k-factor` 時，等同於 `k-regular` subgraph |
-    | 2-factor algorithm | 🌟🌟🌟 | Theorem: 每個擁有 **even degree** 的 regular graph，其都會有一個 **2-factor** 的存在  |
-    | Corollary of Tutte theorem | 🌟🌟 | 每個 3-regular，且沒有 cut-edge 存在的 graph，擁有 1-factor （perfect matching） | 
-    | Factor transformation | 🌟🌟🌟 | f-factor 轉換成 1-factor 的手法 |
-    | Edmond's Blossom Algorithm | 🌟🌟 | |
-
-* 可補上原始碼(補坑):
-   * 匈牙利演算法
-   * augmenting path algorithm
-   * Edmond's Blossom algorithm (難)
+ | 名稱 | 重要性 | 備註 |
+ | ------ | ------ | ------ |
+ | Hall's condition | 🌟🌟🌟🌟🌟 | 詳細於上方連結 |
+ | Tutte's theorem | 🌟🌟🌟🌟🌟 | 詳細於上方連結 |
+ | vertex cover >= matching | 🌟🌟 | 當等號成立時，表示最佳化； 並且在 bipartite 時， 等號成立 |
+ | Lemma 3.1.21 | 🌟🌟🌟  | α(G) + β(G) = n(G) | 
+ | Theorem 3.1.22 | 🌟🌟🌟 | α'(G) + β'(G) = n(G) |
+ | Corollary ( 3.1.21 + 3.1.22 ) | 🌟🌟🌟🌟 | α(G) = β'(G) | 
+ | Augmenting Path Algorithm | 🌟🌟🌟🌟🌟 | 產生 `M-augmenting path (maximum matching)` 及 `vertex cover, R = T U (X-S)` |
+ | 匈牙利演算法 | 🌟🌟🌟🌟🌟 | 從 weighted bipartite matching 中找出 weight cost 總和最大的 traversal (Assignment Problem)； （e.g. 得到 maximum weight matching 及 minimum cost cover） |
+ | Gale-Shapley Proposal Algorithm | 🌟 | 配對問題（擇偶優先序） |
+ | factor | 🌟🌟🌟 | 為該圖中的一個 spanning subgraph； 所以當一個圖存在 `k-factor` 時，等同於 `k-regular` subgraph |
+ | 2-factor algorithm | 🌟🌟🌟 | Theorem: 每個擁有 **even degree** 的 regular graph，其都會有一個 **2-factor** 的存在  |
+ | Corollary of Tutte theorem | 🌟🌟 | 每個 3-regular，且沒有 cut-edge 存在的 graph，擁有 1-factor （perfect matching） | 
+ | Factor transformation | 🌟🌟🌟 | f-factor 轉換成 1-factor 的手法 |
+ | Edmond's Blossom Algorithm | 🌟🌟 | |
 
 ### 舊版
 * Hall's Condition
