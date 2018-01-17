@@ -11,10 +11,10 @@ Notes/Implementation for course - graph theory.
 # 使用
 * 主要使用 markdown to html 格式做教學頁面
 * 系統需求
-    * (`Optional`)GNU make
-        * 也可以直接運行 Makefile 內的腳本
-    * node.js
-    * npm 套件：以 [`papogen`](https://github.com/toolbuddy/papoGen) 為主 (版本：`v0.0.18`)
+    * GNU make (`Optional`)
+        * 也可以直接運行 Makefile 內的腳本( 直接運行 papogen 指令! ) 
+    * node.js ( 版本 > v`9.1` )
+    * npm 套件：以 [`papogen`](https://github.com/toolbuddy/papoGen) 為主 (版本：`v0.0.18`)
         * 解決原本單檔轉換、圖源無法使用本地端的問題
 * 檔案結構
     * `docs/`: 輸出的網站放置位置
@@ -48,8 +48,8 @@ Notes/Implementation for course - graph theory.
 
     | 名稱 | 重要性 | 備註 |
     | ------ | ------ | ------ |
-    | Hall's condition | 🌟🌟🌟🌟🌟 | |
-    | Tutte's theorem | 🌟🌟🌟🌟🌟 | |
+    | Hall's condition | 🌟🌟🌟🌟🌟 | (在上方連結有詳細) |
+    | Tutte's theorem | 🌟🌟🌟🌟🌟 | (在上方連結有詳細) |
     | vertex cover >= matching | 🌟🌟 | 當等號成立時，表示最佳化； 並且在 bipartite 時， 等號成立 |
     | Lemma 3.1.21 | 🌟🌟🌟  | α(G) + β(G) = n(G) | 
     | Theorem 3.1.22 | 🌟🌟🌟 | α'(G) + β'(G) = n(G) |
@@ -62,6 +62,11 @@ Notes/Implementation for course - graph theory.
     | Corollary of Tutte theorem | 🌟🌟 | 每個 3-regular，且沒有 cut-edge 存在的 graph，擁有 1-factor （perfect matching） | 
     | Factor transformation | 🌟🌟🌟 | f-factor 轉換成 1-factor 的手法 |
     | Edmond's Blossom Algorithm | 🌟🌟 | |
+
+* 可補上原始碼(補坑):
+   * 匈牙利演算法
+   * augmenting path algorithm
+   * Edmond's Blossom algorithm (難)
 
 ### 舊版
 * Hall's Condition
@@ -115,3 +120,7 @@ Notes/Implementation for course - graph theory.
         * 而從等價的敘述中可以推得以下的特性： 在 connectivity = k 的 graph 中，我們可以稱之為 `1,2, ... k-1`-connected !! （因為都可以符合等價中的敘述！）但反過來的列式則不能成立！（若某 graph 為 k-connected 來推其為 connectivity = k， 這項命題則為 **否**！！）
 
 ---
+
+## 編寫者
+
+* Kevin Cyu (2017/9~2018/1): Ch3, Ch4
