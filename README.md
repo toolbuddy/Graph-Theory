@@ -21,17 +21,30 @@ Notes/Implementation for course - graph theory.
     * `src/`: 轉換來源依據，放置有 markdown 格式檔案；並再使用 papogen 後，能夠一次性轉換多個檔案；可以在 Makefile 中看到與以往轉換工具上的差異！
         * 位於 `src/` 底下的目錄名稱為章節，可以在底下任意加上 markdown 檔案（`檔名即為標題`！）
 
+* 撰寫方式：
+    * 統一由 `markdown` 做編寫
+    * 以 **github style** 為主
+
+* 編譯產生網站：
+    * 在專案根目錄下 `make` 即可！
+    * 會透過 `papogen` 這個工具來做 markdown -> html 的過程！
+    * 所產生的結果會在 `docs/` 資料夾當中
+
 > 使用了自製的 papoGen，不再需要一個個產生！
 
 # 目錄
 
-## Chapter 1
+## Chapter 1 (Basic Introduction of Graph)
+
+* [第一章整理](https://toolbuddy.github.io/Graph-Theory/basic-graph/index.html)
 
 > 待補上
 
 ---
 
-## Chapter 2
+## Chapter 2 (Tree & Distance)
+
+* [第二章整理](https://toolbuddy.github.io/Graph-Theory/tree-distance/index.html)
 
 > 待補上
 
