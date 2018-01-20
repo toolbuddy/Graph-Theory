@@ -75,6 +75,18 @@ Notes/Implementation for course - graph theory.
  | circuit | | 為一個 `closed trail` 的 list，我們**不去指定哪個 vertex 作為第一個起始 vertex**，但是保留 list 內呈現一個 cyclic order |
  | Eulerian circuit/trail | | 若 graph 有這個性質，則可稱該 graph 有個 circuit/trail 包含該 graph 所有 edges |
  | maximal,maximum | | maximal: 表示一個 set 在條件下無法再擴大； maximum: 表示一個數值達最大； maximal != maximum |
+ | degree, d(v) | | 為一個 vertex 上所有連著的 edge 數量 |
+ | Maximum degree | | Δ(G) | 
+ | Minimum degree | | δ(G) |
+ | Δ(G) = δ(G) | | 表示 G 為 regular |
+ | k-regular | | 當 graph 中的 common degree 為 k 時稱之 |
+ | N(v) | | v 為 vertex， N(v) 表示所有 v 的鄰居集合 |
+ | order | | 標記為 **n(G)** ，其代表 G 的所有 vertices 數量，稱為 *order* |
+ | size | | 標記為 **e(G)** ，其代表 G 的所有 edges 數量，稱為 *size*  |
+ | ∑ d(v) = 2*e(G) | | |
+ | Δ(G) >= `2*e(G)/n(G)` >= δ(G) | | 2*e(G)/n(G) 為一個 graph G 中平均的 vertex degree |
+ | degree sequence | | 為一串 vertex degree 的串列，通常用 non-increasing 的排序 |
+ | graphic sequence | | 為一串 simple graph 的 degree sequence 的 nonnegative 數字的串列 |
  | (待補上) | | |
  
 
