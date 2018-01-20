@@ -55,11 +55,11 @@ Notes/Implementation for course - graph theory.
  | Incident matrix: M(G) | | 為 `n-by-m` 的 matrix，當 entry m[i][j] 為 1 時，表示 edge "**ej**" 的 endpoint 其中一點為 "**vi**" ，否則為 0 |
  | **Isomorphism** | |  |
  | bijection | | |
- | complete graph | | |
- | self-complementary | | |
- | decomposition | | |
+ | complete graph | | 其 graph 內每個 vertices 兩兩間互為 adjacent |
+ | self-complementary | | 若和自己的 complement 互為 isomorphic 的話則稱之 |
+ | decomposition | | 為一連串 subgraph，每條 edge 剛好出現其中一個 subgraph 當中！ |
  | Petersen Graph | | |
- | girth | | |
+ | girth | | 為 graph 中最短的 cycle 之長度（若該圖沒有 cycle，則其 girth 為 infinite） |
  
 
 > 待補上
