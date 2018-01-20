@@ -60,6 +60,22 @@ Notes/Implementation for course - graph theory.
  | decomposition | | 為一連串 subgraph，每條 edge 剛好出現其中一個 subgraph 當中！ |
  | Petersen Graph | | |
  | girth | | 為 graph 中最短的 cycle 之長度（若該圖沒有 cycle，則其 girth 為 infinite） |
+ | automorphism | | 自己是自己的 isomorphism 則可稱之 |
+ | walk | | 為一連串 vertices, edges 所組合的串列： { v0,e1,v1,...ek,vk }, 1<= i <= k, ei 是位於 vi-1 及 vi 中間的 edge（walk 可以重複走 edge!） |
+ | trail | | 便是 walk 中沒有任何重複 edge 的子集！ |
+ | `u,v-walk` , `u,v-trail` | | 則表示此條並非 close，並且 endpoint 為 u (first),v(last) |
+ | `u,v-path` | | 則為一條 path 其 degree 為 1 的 vertice 為 u,v；其餘的則為 internal vertices（**而 path 則為最短路徑！無重複點**） |
+ | walk,trail,path,cycle | | 這些長度計算*來自其中 edge 個數*；而當 walk, trail 的 endpoints 為同一個 vertex， 則可稱其為 `closed` |
+ | walk & path | | Every `u,v-path` 包含 `u,v-path` | 
+ | components | | 圖 G 的 components 為其 maximal connected subgraphs； 一個 maximal connected subgraph 是為一個 connected、同時也不包含在其他 subgraph 之中的 subgraph； 若該 component 沒有任何的 edge，則稱之為 `trivial`； 並且存在性質： **每個擁有 n 個 vertices、k 條 edges 的 graph，其至少含有 n-k 個 component!** |
+ | isolated vertex | | degree 為 0 的 vertex |
+ | cut-edge/cut-vertex | | 表示著該 vertex/edge 若被刪除後，該 graph 之 **component 數量會增加**時稱之； Cut-Edge 表示法： `G-e`: 從 G 中刪掉一條 edge、`G-M`: 從 G 中刪除一個 *edge 集合*； Cut-Vertex 表示法： `G-v`: 從 G 之中刪除一個 vertex、 `G-S` 則是從 G 當中刪除一個 *vertices 集合* |
+ | Induced Subgraph: G[T] | | 其 vertex 集合 T, T 屬於 G 的 vertex 集合，且其所有 edge 的 endpoints 皆包含於 T 之中 ( e.g. 點集合決定，則邊集合也取決於此點集合而同時被決定 ) |
+ | Eulerian | | 若一個 graph 為 Eulerian，則其擁有一個 `closed trail`，其包含所有 edges |
+ | circuit | | 為一個 `closed trail` 的 list，我們**不去指定哪個 vertex 作為第一個起始 vertex**，但是保留 list 內呈現一個 cyclic order |
+ | Eulerian circuit/trail | | 若 graph 有這個性質，則可稱該 graph 有個 circuit/trail 包含該 graph 所有 edges |
+ | maximal,maximum | | maximal: 表示一個 set 在條件下無法再擴大； maximum: 表示一個數值達最大； maximal != maximum |
+ | (待補上) | | |
  
 
 > 待補上
