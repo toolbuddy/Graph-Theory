@@ -38,6 +38,30 @@ Notes/Implementation for course - graph theory.
 
 * [第一章整理](https://toolbuddy.github.io/Graph-Theory/basic-graph/index.html)
 
+ | 名稱 | 重要性 | 備註 |
+ | ------ | ------ | ------ |
+ | simple graph | | 沒有 loops 或是 multiple edges 的 graph |
+ | complement of graph | | 理解何謂 "圖的補集" |
+ | bipartite graph | 🌟🌟🌟 | bipartite 性質 |
+ | clique | | complete bipartite graph |
+ | independent set | | e.g. stable set；在該集合內，任何 elements 之間都沒有相連結的 edges（沒有 adjacent vertices） |
+ | chromatic number | | 使用最少顏色來為所有的 vertices 上色，且 adjacent 的兩兩 vertices 不得相同 |
+ | path | | 為一連串 vertices 所串接而成，以 <v0,v1,...,vk> 表示；而其中任兩個編號連續的 vertex 皆為 `adjacent`，並以 v0, vk 作為其 end point (start and end) |
+ | cycle | | 為一連串 vertices 所串接而成，以 <v0,v1,...,vk,**v0**> 表示； 可以從串接上看到，會回到當初的出發點！並且在 cycle 的串接列中，不會出現*重複的 vertices*! |
+ | subgraph | | 若稱 A 為 G 的 subgraph，則代表 V(A) 為 V(G) 的子集合（V 為 vertex 集合的意思）；除此之外， edge 集合也是相同的關係！ 因此我們也可以稱其關係為 "**G contains A**" |
+ | connected graph | | 所有 vertices 的 pair 皆可被一條 *path* 所包含，否則稱其為 `disconnect`! |
+ | loopless graph | | |
+ | Adjacency Matrix: A(G) | | 為 `n-by-n`（因為是點對點關係，所以必為 n-to-n !） 的 matrix； 其中 a[i][j] 表示在 G 中 endpoints 為 { vi,vj } 兩點之間 edge 的個數 |
+ | Incident matrix: M(G) | | 為 `n-by-m` 的 matrix，當 entry m[i][j] 為 1 時，表示 edge "**ej**" 的 endpoint 其中一點為 "**vi**" ，否則為 0 |
+ | **Isomorphism** | |  |
+ | bijection | | |
+ | complete graph | | |
+ | self-complementary | | |
+ | decomposition | | |
+ | Petersen Graph | | |
+ | girth | | |
+ 
+
 > 待補上
 
 ---
