@@ -1,12 +1,22 @@
 # Graph-Theory
 Notes/Implementation for course - graph theory. 
 
+## 編寫者
+* Kevin Cyu (2017/9~2018/1)
+
 # 教學使用
 * 目前由成功大學的圖形理論為主軸做紀錄與整理
     * 目前挑選較難、重點部份做整理
     * 未來有機會希望增加原始碼實作，藉此透過原始碼來分析時間複雜度、取代以往只看虛擬碼望梅止渴
 * 希望透過 `費曼學習法` 來讓理解更加清晰、務實，而非虛懂、硬背
 * 如果發現有誤、或是有需要補充之處，歡迎 fork 做修正、或是直接開啟 issue 反應給我，謝謝！
+
+### 項目
+
+* [Chapter 1](#chapter-1-basic-introduction-of-graph)
+* [Chapter 2](#chapter-2-tree--distance)
+* [Chapter 3](#chapter-3-matching--factor)
+* [Chapter 4](#chapter-4-connectivity--path)
 
 # 使用
 * 主要使用 markdown to html 格式做教學頁面
@@ -193,7 +203,3 @@ Notes/Implementation for course - graph theory.
         * 而從等價的敘述中可以推得以下的特性： 在 connectivity = k 的 graph 中，我們可以稱之為 `1,2, ... k-1`-connected !! （因為都可以符合等價中的敘述！）但反過來的列式則不能成立！（若某 graph 為 k-connected 來推其為 connectivity = k， 這項命題則為 **否**！！）
 
 ---
-
-## 編寫者
-
-* Kevin Cyu (2017/9~2018/1): Ch3, Ch4
