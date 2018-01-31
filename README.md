@@ -109,6 +109,9 @@ Notes/Implementation for course - graph theory.
 
 * [第二章整理](https://toolbuddy.github.io/Graph-Theory/tree-distance/index.html)
 
+* 值得一看：
+    * [Cayley Theorem 推導過程](pdf/Cayley-Theorem.pdf), 整理的簡單筆記也紀錄於上方第2章整理的連結當中！
+
 > 待補上
 
 ---

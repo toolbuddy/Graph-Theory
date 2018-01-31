@@ -1,2 +1,39 @@
 <!-- "doc" type, with tabs usage as template--><!-- Author: Kevin Cyu--><!-- include mixins--><!-- mixin - list--><!-- main--><!DOCTYPE html><html><!-- include header--><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Graph-Theory-Ch2</title><link rel="stylesheet" href="./asset/highlight.min.css"/><link rel="stylesheet" href="./asset/paper.min.css"/><link rel="stylesheet" href="./asset/monokai.css"/><link rel="stylesheet" href="./asset/main.css"/><link rel="stylesheet" href="./asset/cn-font.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script src="./asset/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class="container"><div class="paper"><div class="demo-title" id="top"><div class="row flex-center"><div class="text-center"> <h1>Graph-Theory-Ch2</h1></div></div></div><div class="section"><div class="flex-spaces tabs">
-</div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>
+<input id="tab1" type="radio" name="tabs" checked/>
+<label for="tab1">Cayley-Theorem</label>
+
+<div class="content" id="content1"><p><h2>Cayley Theorem</h2>
+<p>搭配根目錄底下 <code>pdf/Cayley-Theorem.pdf</code> 做閱讀！
+本篇透過從頭論述 graph 的基本定義開始做推導，慢慢推到為什麼 Cayley formula 要做這樣的舉動，以及最後為什麼是這個公式</p>
+<h3>Basic Concept</h3>
+<p>Cayley Formula 的核心概念，主要可以從 n 個 vertices 上能建構出多少棵樹：</p>
+<ul>
+<li>Bottom up 的方式：
+<ul>
+<li>從散落的 vertices 開始，逐一加入 edges 來建構 tree</li>
+</ul>
+</li>
+<li>Top down 的方式：
+<ul>
+<li>從 complete graph 中 remove edge 來得到 tree</li>
+</ul>
+</li>
+</ul>
+<p>而 Cayley Formula 則告訴我們有多少種方法來得到 tree (e.g. 到底有多少 spanning tree 於 n 個 vertices 之上); 我們把這個結果記為 <code>Tn</code></p>
+<ul>
+<li>得到的格式： <code>| Tn | = n^(n-2)</code></li>
+</ul>
+<h3>Prufer Encoding</h3>
+<p>再來我們看到 Prufer Encoding （<code>Pn</code>）:</p>
+<ul>
+<li>Prufer code 是為 n-2 個串列數字組成，可成為 <code>n^n-2</code> 個 Prufer sequence; 並且每個 Prufer sequence 都可以對應到一棵 tree</li>
+<li>如此一來我們可以得到 Tn 與 Pn 之間關係的 bijective function</li>
+</ul>
+<h3>Forest</h3>
+<p>定義 Tn,k ： n 個 vertices, 並且 k 為形成的 graph 之 tree elements 的數量 （e.g. 每個形成的 forest set 內 tree 的總數）</p>
+<p>可以把 graph G 看成 <code>k</code> 個 tree，每個 root （<code>root 數量即等於 k</code>）都可以連結到 i 個 vertices（從 <code>n-k</code> 當中取 i 個成為這個 root 的 tree）</p>
+<p>如果把這個 root 刪除，則可以得到 （k-1） + （i） 個 vertices</p>
+<p>並從此規則來看到，我們的 Tn,k 可以等於 其餘樹的總數（Tn-1）以及從 (n-k) 當中挑選 i 個的結果 （可以參考 pdf 內的 <code>equation (2)</code>）</p>
+<p>之後搭配 Proposition 的公式，便可以得到 general case 的情況！也就是 Tn,k 所能產出的 spanning tree 的數量</p>
+<p>而 Cayley Formula 則是在這個 general case 為 Tn,1 的時候的解（也就是 當 n 個 vertices 下，所能構成的最大 spanning tree 總數為多少）</p>
+</p></div></div></div><div class="row flex-right"><p>Created by <span class="badge secondary">@ToolBuddy/@papercss</span></p></div></div></div></body></html>
